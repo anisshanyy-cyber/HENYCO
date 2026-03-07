@@ -1,0 +1,24 @@
+{
+    "fr": {
+        "nav_home": "Accueil",
+        "nav_services": "Services",
+        "nav_solutions": "Solutions IA",
+        "nav_packs": "Solutions Énergétiques",
+        "nav_projets": "Nos Projets",
+        "nav_contact": "Contact",
+        "hero_title": "L’Innovation au cœur de la Transition Énergétique",
+        "hero_desc": "HENYCO combine ingénierie de précision, intelligence stratégique et innovation technologique pour accompagner les acteurs du marché énergétique vers des performances durables.",
+        "footer_copy": "© 2026 HENYCO. Tous droits réservés."
+    },
+    "en": {
+        "nav_home": "Home",
+        "nav_services": "Services",
+        "nav_solutions": "AI Solutions",
+        "nav_packs": "Energy Solutions",
+        "nav_projets": "Our Projects",
+        "nav_contact": "Contact",
+        "hero_title": "Innovation at the Heart of Energy Transition",
+        "hero_desc": "HENYCO combines precision engineering, strategic intelligence, and technological innovation to support energy market players toward sustainable performance.",
+        "footer_copy": "© 2026 HENYCO. All rights reserved."
+    }
+}

@@ -1,0 +1,47 @@
+# Implementation Plan - Remove "Services" and Optimize Layout
+
+This plan outlines the steps to remove all references to the "Services" section and optimize the header and hero sections for a more premium look.
+
+## Proposed Changes
+
+### 1. Global Styles ([style.css](file:///c:/Users/BE1/Downloads/HAICCO%20WAB%20SITE/style.css))
+- **Header (`nav`):** Update spacing, background, and shadow.
+- **Logo (`.logo img`):** Reduce height to 70px.
+- **Menu Typography (`.nav-links a`):** Apply uppercase, font-size 14px, and letter-spacing 1px.
+- **Menu Spacing (`.nav-links`):** Set gap to 36px.
+- **Hero Section (`.hero-section`):** Standardize padding, min-height, and alignment.
+    - `padding-top: 160px;` (Balanced for fixed header)
+    - `min-height: 100vh;`
+    - `display: flex; align-items: center;`
+
+### 2. Homepage ([index.html](file:///c:/Users/BE1/Downloads/HAICCO%20WAB%20SITE/index.html))
+- **Navigation:** Remove "Services" link.
+- **Content:** Delete the entire `<section class="services-grid">`.
+- **Footer:** Remove "Services Techniques" link.
+
+### 3. All Other HTML Pages
+- **Navigation:** Remove "Services" link from:
+    - [contact.html](file:///c:/Users/BE1/Downloads/HAICCO%20WAB%20SITE/contact.html)
+    - [projets.html](file:///c:/Users/BE1/Downloads/HAICCO%20WAB%20SITE/projets.html)
+    - [projet-1.html](file:///c:/Users/BE1/Downloads/HAICCO%20WAB%20SITE/projet-1.html) to [projet-6.html](file:///c:/Users/BE1/Downloads/HAICCO%20WAB%20SITE/projet-6.html)
+    - [solutions-energetiques.html](file:///c:/Users/BE1/Downloads/HAICCO%20WAB%20SITE/solutions-energetiques.html)
+    - [solutions-ia.html](file:///c:/Users/BE1/Downloads/HAICCO%20WAB%20SITE/solutions-ia.html)
+- **Footer:** Remove "Services Techniques" link (where present).
+- **Hero Layout:** Remove inline `style="padding-top: ...; min-height: ...;"` from `<header>` or `<section>` tags to rely on the updated global CSS.
+
+### 4. File Deletion
+- **Delete [services.html](file:///c:/Users/BE1/Downloads/HAICCO%20WAB%20SITE/services.html)**
+
+---
+
+## Verification Plan
+
+### Automated Tests
+- Not applicable for this static site.
+
+### Manual Verification
+1. **Link Integrity:** Click through all navigation links to ensure no "Services" references remain and no 404s occur.
+2. **Visual Consistency:** Verify the header is more compact (70px logo) and the hero title doesn't collide with the fixed header.
+3. **Responsiveness:** Check the layout on mobile (width < 768px) to ensure the header remains functional and spacing is appropriate.
+4. **Content Check:** Ensure the "Services" section is completely gone from the homepage.
+5. **Space Balance:** Ensure the H1/H2 titles have professional vertical spacing.

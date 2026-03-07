@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions Énergétiques | HENYCO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="henyco logo.png" alt="HENYCO Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="solutions-energetiques.html">Solutions Énergétiques</a></li>
+            <li><a href="solutions-ia.html">Solutions IA</a></li>
+            <li><a href="projets.html">Nos Projets</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-background" style="background-image: url('Couverture pages/Couverture 2.jpg');"></div>
+        <div class="hero-content">
+            <h1>Solutions Énergétiques Stratégiques</h1>
+            <p>Nous transformons la complexité technique en performance durable.
+                Ingénierie de précision, conformité maîtrisée, rentabilité optimisée.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-intro fade-in" style="background: white;">
+            <div class="container">
+                <h2>Votre transition, notre expertise.</h2>
+                <p>Nous concevons et sécurisons vos projets de transition énergétique à forte valeur ajoutée : études
+                    techniques, audits, rénovation, modélisation avancée, solaire et systèmes fluides.
+
+                    Notre approche allie précision d’ingénierie et vision stratégique pour transformer la complexité
+                    technique en décisions claires et performantes.</p>
+            </div>
+        </section>
+
+        <section class="services-grid fade-in">
+            <div class="services-card">
+                <h3>Rénovation Globale </h3>
+                <p>Maîtrise complète du Plan Pluriannuel de Travaux (PPPT) pour les bâtiments collectifs et des audits
+                    réglementaires pour maisons et immeubles. Nous concevons des trajectoires de rénovation performantes
+                    pour faire évoluer vos actifs vers les classes A ou B. Diagnostics techniques et audits de haute
+                    précision inclus.</p>
+            </div>
+            <div class="services-card">
+                <h3>Fluides (CVC)</h3>
+                <p>Conception et dimensionnement de solutions de chaleur décarbonée (Pompes à chaleur, réseaux de
+                    chaleur). Nos études de fluides garantissent une efficacité saisonnière optimale et une réduction
+                    drastique de l'empreinte carbone opérationnelle de vos bâtiments. </p>
+            </div>
+            <div class="services-card">
+                <h3>Solaire Photovoltaïque</h3>
+                <p>Études de productible de haute précision et dimensionnement de centrales PV en toiture. Nous
+                    transformons vos surfaces immobilières en unités de production d'énergie, incluant la gestion des
+                    courbes de charge et l'optimisation du ROI via les dispositifs d'État. </p>
+            </div>
+        </section>
+
+        <section class="cta-final fade-in">
+            <h2>Prêt à optimiser votre patrimoine ?</h2>
+            <a href="contact.html" class="btn-primary">Parler à un expert</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-expertise">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="henyco logo.png" alt="HENYCO Logo"></a>
+                </div>
+                <p>L'expertise qui réchauffe vos performances, l'IA qui refroidit vos délais.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="solutions-energetiques.html">Solutions Énergétiques</a>
+                    <a href="solutions-ia.html">Solutions IA</a>
+                    <a href="projets.html">Nos Projets</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Contact & Réseaux</h4>
+                <div class="footer-links">
+                    <a href="mailto:contact@henyco.com">Email</a>
+                    <a href="https://wa.me/21620669007">WhatsApp</a>
+                    <a href="https://www.linkedin.com/company/henyco" target="_blank">LinkedIn</a>
+                    <a href="https://x.com/henyco" target="_blank">X (Twitter)</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2026 HENYCO. Tous droits réservés.</p>
+            </div>
+            <div class="legal-links">
+                <a href="#">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => scrollObserver.observe(el));
+    </script>
+</body>
+
+</html>
