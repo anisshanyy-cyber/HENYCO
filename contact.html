@@ -34,11 +34,10 @@
         </div>
     </header>
 
-    <main class="section-intro" style="background: white; text-align: left;">
-        <div class="container"
-            style="max-width: 1200px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 60px;">
+    <main class="contact-page">
+        <div class="contact-split-container">
 
-            <div class="fade-in">
+            <div class="contact-info-side fade-in">
                 <h2>Contactez-nous</h2>
                 <div style="margin-top: 30px;">
                     <div style="margin-bottom: 25px; display: flex; align-items: center; gap: 15px;">
@@ -84,16 +83,18 @@
                 </div>
             </div>
 
-            <div class="fade-in">
+            <div class="contact-form-side fade-in">
                 <h2>Envoyer un message</h2>
-                <form style="margin-top: 30px; display: flex; flex-direction: column; gap: 20px;">
-                    <input type="text" placeholder="Nom complet"
-                        style="padding: 15px; border: 1px solid #DDD; border-radius: 4px;">
-                    <input type="email" placeholder="Email professionnel"
-                        style="padding: 15px; border: 1px solid #DDD; border-radius: 4px;">
-
-                    <textarea placeholder="Votre message" rows="5"
-                        style="padding: 15px; border: 1px solid #DDD; border-radius: 4px;"></textarea>
+                <form class="minimal-form" style="margin-top: 30px;">
+                    <div class="form-group">
+                        <input type="text" placeholder="Nom complet">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email professionnel">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Votre message" rows="5"></textarea>
+                    </div>
                     <button type="submit" class="btn-primary" style="width: fit-content;">Envoyer la demande</button>
                 </form>
             </div>

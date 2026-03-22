@@ -50,4 +50,31 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.fade-in').forEach(el => {
         observer.observe(el);
     });
+
+    // Burger Menu Logic
+    const burger = document.createElement('div');
+    burger.className = 'burger';
+    burger.innerHTML = '<span></span><span></span><span></span>';
+    
+    const nav = document.querySelector('nav');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (nav && navLinks) {
+        nav.insertBefore(burger, navLinks);
+        
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+    }
 });
