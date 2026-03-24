@@ -33,6 +33,18 @@ function toggleLanguage() {
 // Initial load
 document.addEventListener('DOMContentLoaded', () => {
     loadTranslations();
+    
+    // Sticky Nav Blur & Logo Resize on Scroll
+    const headerNav = document.querySelector('nav');
+    if (headerNav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                headerNav.classList.add('scrolled');
+            } else {
+                headerNav.classList.remove('scrolled');
+            }
+        });
+    }
 
     // Global Scroll Reveal Animation
     const observerOptions = {
@@ -55,13 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const burger = document.createElement('div');
     burger.className = 'burger';
     burger.innerHTML = '<span></span><span></span><span></span>';
-    
+
     const nav = document.querySelector('nav');
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (nav && navLinks) {
         nav.insertBefore(burger, navLinks);
-        
+
         burger.addEventListener('click', () => {
             burger.classList.toggle('active');
             navLinks.classList.toggle('active');

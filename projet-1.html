@@ -21,14 +21,18 @@
 
     </nav>
 
-    <header class="hero-section"
-        style="background: linear-gradient(rgba(0,46,93,0.8), rgba(0,46,93,0.8)), url('page 1.webp'); background-size: cover; background-position: center;">
-        <span
-            style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Étude
-            de Cas | Rénovation Résidentielle</span>
-        <h1 class="fade-in">Rénovation Globale - Maison Individuelle (Paris 46)</h1>
-        <p class="fade-in">Passer d'une passoire thermique classée G à un logement performant classé B avec 81%
-            d'économie d'énergie.</p>
+    <header class="hero-section">
+        <div class="hero-background" style="background-image: url('page 1.webp');">
+        </div>
+        <div class="hero-content">
+            <span
+                style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Étude
+                de Cas | Rénovation Résidentielle</span>
+            <h1 class="fade-in">Rénovation Globale - Maison Individuelle (Paris 46)</h1>
+            <p class="fade-in" style="transition-delay: 0.2s;">Passer d'une passoire thermique classée G à un logement
+                performant classé B avec 81%
+                d'économie d'énergie.</p>
+        </div>
     </header>
 
     <main class="section-intro" style="text-align: left; background: white;">
@@ -53,7 +57,7 @@
                     </ul>
 
                     <h2 style="margin-top: 40px;">Analyse Technique & Scénarios</h2>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                    <div class="projects-grid" style="padding: 20px 0; margin-top: 20px;">
                         <img src="Projet 1/ETAT INTIALE.webp" alt="État Initial"
                             style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
                         <img src="Projet 1/SCENARIO 1.webp" alt="Scénario 1"
@@ -106,9 +110,8 @@
         <div class="footer-container">
             <div class="footer-expertise">
                 <div class="footer-logo">
-                    <a href="index.html"><img src="henyco logo.webp" alt="HENYCO Logo"></a>
+                    <a href="index.html"><img src="FOOTER LOGO.jpg" alt="HENYCO Logo"></a>
                 </div>
-                <p>L'expertise qui réchauffe vos performances, l'IA qui refroidit vos délais.</p>
             </div>
             <div class="footer-column">
                 <h4>Navigation</h4>
@@ -122,11 +125,12 @@
             </div>
             <div class="footer-column">
                 <h4>Contact & Réseaux</h4>
-                <div class="footer-links">
-                    <a href="mailto:contact@henyco.com">Email</a>
-                    <a href="https://wa.me/21620669007">WhatsApp</a>
-                    <a href="https://www.linkedin.com/company/henyco" target="_blank">LinkedIn</a>
-                    <a href="https://x.com/henyco" target="_blank">X (Twitter)</a>
+                <div class="footer-social-row">
+                    <a href="mailto:contact@henyco.com"><img src="ICONS/MAIL.webp" alt="Email"></a>
+                    <a href="https://wa.me/21620669007"><img src="ICONS/WHATSAPP.webp" alt="WhatsApp"></a>
+                    <a href="https://www.linkedin.com/company/henyco" target="_blank"><img src="ICONS/LINKEDIN.webp"
+                            alt="LinkedIn"></a>
+                    <a href="https://x.com/henyco_" target="_blank"><img src="ICONS/X.webp" alt="X"></a>
                 </div>
             </div>
         </div>

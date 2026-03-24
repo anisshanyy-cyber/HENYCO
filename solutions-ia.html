@@ -28,8 +28,9 @@
         <div class="hero-background" style="background-image: url('Couverture pages/Couverture 3.webp');">
         </div>
         <div class="hero-content">
-            <h1>L'Intelligence Artificielle au service de l'Énergie</h1>
-            <p>Nous développons des agents intelligents pour automatiser la conformité réglementaire et
+            <h1 class="fade-in">L'Intelligence Artificielle au service de l'Énergie</h1>
+            <p class="fade-in" style="transition-delay: 0.2s;">Nous développons des agents intelligents pour automatiser
+                la conformité réglementaire et
                 optimiser le pilotage énergétique en temps réel.</p>
         </div>
     </header>
@@ -83,9 +84,8 @@
         <div class="footer-container">
             <div class="footer-expertise">
                 <div class="footer-logo">
-                    <a href="index.html"><img src="henyco logo.webp" alt="HENYCO Logo"></a>
+                    <a href="index.html"><img src="FOOTER LOGO.jpg" alt="HENYCO Logo"></a>
                 </div>
-                <p>L'expertise qui réchauffe vos performances, l'IA qui refroidit vos délais.</p>
             </div>
             <div class="footer-column">
                 <h4>Navigation</h4>
@@ -103,7 +103,7 @@
                     <a href="mailto:contact@henyco.com">Email</a>
                     <a href="https://wa.me/21620669007">WhatsApp</a>
                     <a href="https://www.linkedin.com/company/henyco" target="_blank">LinkedIn</a>
-                    <a href="https://x.com/henyco" target="_blank">X (Twitter)</a>
+                    <a href="https://x.com/henyco_" target="_blank">X (Twitter)</a>
                 </div>
             </div>
         </div>
@@ -118,16 +118,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        const scrollObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => scrollObserver.observe(el));
-    </script>
 </body>
 
 </html>
