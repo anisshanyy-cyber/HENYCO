@@ -2,94 +2,171 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactez-nous | HENYCO</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | HENYCO – L'Innovation Énergétique</title>
+    <!-- On réintègre la feuille de style globale -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav>
-        <div class="logo">
-            <a href="index.html"><img src="henyco logo.webp" alt="HENYCO Logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="solutions-energetiques.html">Solutions Énergétiques</a></li>
-            <li><a href="solutions-ia.html">Solutions IA</a></li>
-            <li><a href="projets.html">Nos Projets</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-
-    </nav>
-
-    <header class="hero-section">
-        <div class="hero-background" style="background-image: url('Couverture pages/Couverture 5.webp');">
-        </div>
+    <!-- HEADER IMMERSIF -->
+    <header class="immersive-hero-container" style="height: 50vh; min-height: 400px;">
+        <nav class="glass-nav">
+            <div class="logo">
+                <a href="index.html"><img src="henyco logo.webp" alt="HENYCO Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="solutions-energetiques.html">Solutions Énergétiques</a></li>
+                <li><a href="solutions-ia.html">Solutions IA</a></li>
+                <li><a href="projets.html">Nos Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-background" style="background-image: url('Couverture pages/Couverture 61.webp');"></div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="fade-in">Parlons de votre projet</h1>
-            <p class="fade-in" style="transition-delay: 0.2s;">Nos experts en ingénierie et innovation sont à votre
-                disposition pour structurer votre
-                transition énergétique.</p>
+            <h1 class="fade-in">Donnons vie à vos ambitions</h1>
+            <p class="fade-in" style="transition-delay: 0.2s;">Une expertise technique et digitale pour propulser votre
+                transition vers l'avenir.</p>
         </div>
     </header>
 
-    <main class="contact-page">
-        <div class="contact-split-container">
+    <!-- MAIN CONTACT (GRID) -->
+    <main class="contact-grid-main">
 
-            <div class="contact-info-side fade-in">
-                <div class="contact-methods">
-                    <div class="contact-method-item">
-                        <span class="icon-wrapper"><img src="ICONS/MAIL.webp" alt="Email"></span>
-                        <div class="method-text">
-                            <h4>Mail</h4>
-                            <p><a href="mailto:contact@henyco.com">contact@henyco.com</a></p>
+        <!-- LEFT PANEL -->
+        <div class="panel-left fade-in">
+            <div class="left-content">
+                <div class="brand-tag">HENYCO · Experts</div>
+
+                <h1 class="left-heading">
+                    Parlons de votre <em>projet</em> énergétique.
+                </h1>
+
+                <p class="left-sub">
+                    Nos ingénieurs et experts IA sont disponibles pour analyser vos besoins, structurer votre transition
+                    et vous accompagner de A à Z.
+                </p>
+
+                <div class="channels">
+                    <a href="mailto:contact@henyco.com" class="channel">
+                        <div class="channel-icon">✉</div>
+                        <div class="channel-text">
+                            <div class="channel-label">Email</div>
+                            <div class="channel-value">contact@henyco.com</div>
                         </div>
-                    </div>
-                    <div class="contact-method-item">
-                        <span class="icon-wrapper"><img src="ICONS/LINKEDIN.webp" alt="LinkedIn"></span>
-                        <div class="method-text">
-                            <h4>LinkedIn</h4>
-                            <p><a href="https://www.linkedin.com/company/henyco" target="_blank">HENYCO</a></p>
+                    </a>
+                    <a href="https://wa.me/21620669007" target="_blank" class="channel">
+                        <div class="channel-icon">💬</div>
+                        <div class="channel-text">
+                            <div class="channel-label">WhatsApp</div>
+                            <div class="channel-value">+216 20 669 007</div>
                         </div>
-                    </div>
-                    <div class="contact-method-item">
-                        <span class="icon-wrapper"><img src="ICONS/WHATSAPP.webp" alt="WhatsApp"></span>
-                        <div class="method-text">
-                            <h4>Whatsapp</h4>
-                            <p><a href="https://wa.me/21620669007">Discuter avec nous</a></p>
+                    </a>
+                    <a href="https://www.linkedin.com/company/henyco" target="_blank" class="channel">
+                        <div class="channel-icon">in</div>
+                        <div class="channel-text">
+                            <div class="channel-label">LinkedIn</div>
+                            <div class="channel-value">HENYCO</div>
                         </div>
-                    </div>
-                    <div class="contact-method-item">
-                        <span class="icon-wrapper"><img src="ICONS/X.webp" alt="X"></span>
-                        <div class="method-text">
-                            <h4>X</h4>
-                            <p><a href="https://x.com/henyco_" target="_blank">Suivre nos actualités</a></p>
+                    </a>
+                    <a href="https://x.com/henyco_" target="_blank" class="channel">
+                        <div class="channel-icon">𝕏</div>
+                        <div class="channel-text">
+                            <div class="channel-label">X (Twitter)</div>
+                            <div class="channel-value">Henyco _ Advanced Energy Engineering</div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
-            <div class="contact-form-side fade-in">
-                <h2>Envoyer un message</h2>
-                <form class="minimal-form" style="margin-top: 30px;">
-                    <div class="form-group">
-                        <input type="text" placeholder="Nom complet">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Email professionnel">
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Votre message" rows="5"></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary" style="width: fit-content;">Envoyer la demande</button>
-                </form>
+        </div>
+
+        <!-- RIGHT PANEL (FORM) -->
+        <div class="panel-right fade-in" style="animation-delay: 0.2s;">
+            <p class="form-eyebrow">Formulaire de contact</p>
+            <h2 class="form-title">Envoyez-nous un message</h2>
+            <p class="form-desc">
+                Réponse sous 24h ouvrées. Toutes les demandes sont traitées par notre équipe d'experts.
+            </p>
+
+            <!-- SUCCESS MESSAGE -->
+            <div id="success-msg">
+                <div class="success-icon">✅</div>
+                <h3>Message envoyé !</h3>
+                <p>Merci pour votre message. Notre équipe vous répondra dans les 24h ouvrées.</p>
             </div>
 
+            <form id="contact-form" class="contact-form-inner" action="https://formspree.io/f/xgoparav" method="POST">
+                <div class="row-2">
+                    <div class="field">
+                        <label for="prenom">Prénom <span>*</span></label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Jean" required />
+                    </div>
+                    <div class="field">
+                        <label for="nom">Nom <span>*</span></label>
+                        <input type="text" id="nom" name="nom" placeholder="Dupont" required />
+                    </div>
+                </div>
+
+                <div class="row-2">
+                    <div class="field">
+                        <label for="email">Email <span>*</span></label>
+                        <input type="email" id="email" name="email" placeholder="jean@societe.fr" required />
+                    </div>
+                    <div class="field">
+                        <label for="telephone">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="+33 6 00 00 00 00" />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="societe">Société / Organisation</label>
+                    <input type="text" id="societe" name="societe" placeholder="Nom de votre entreprise" />
+                </div>
+
+                <div class="field">
+                    <label for="sujet">Sujet de la demande <span>*</span></label>
+                    <select id="sujet" name="sujet" required>
+                        <option value="" disabled selected>Sélectionnez un sujet…</option>
+                        <option value="Ingénierie énergétique">Ingénierie énergétique (PAC, PV, thermique)</option>
+                        <option value="Audit énergétique">Audit énergétique</option>
+                        <option value="Agent Smart-Admin">Agent IA – Smart-Admin</option>
+                        <option value="Pilotage prédictif">Agent IA – Pilotage prédictif</option>
+                        <option value="Solution sur mesure">Solution IA sur mesure</option>
+                        <option value="Partenariat">Partenariat / Collaboration</option>
+                        <option value="Autre">Autre</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message <span>*</span></label>
+                    <textarea id="message" name="message"
+                        placeholder="Décrivez votre projet, vos besoins ou votre question…" required></textarea>
+                </div>
+
+                <div class="check-row">
+                    <input type="checkbox" id="rgpd" name="rgpd" required />
+                    <label for="rgpd">
+                        J'accepte que HENYCO traite mes données pour répondre à ma demande.
+                        <a href="#">Politique de confidentialité</a>.
+                    </label>
+                </div>
+
+                <input type="hidden" name="_subject" value="Nouveau message HENYCO depuis le site" />
+
+                <button type="submit" class="btn-primary" style="margin-top: 10px; width: auto; max-width: 100%;">
+                    Envoyer le message →
+                </button>
+            </form>
         </div>
+
     </main>
 
+    <!-- FOOTER GLOBAL IDENTIQUE A INDEX.HTML -->
     <footer>
         <div class="footer-container">
             <div class="footer-expertise">
@@ -129,6 +206,40 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        const form = document.getElementById('contact-form');
+        const successMsg = document.getElementById('success-msg');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const btn = form.querySelector('.btn-primary');
+            const originalText = btn.textContent;
+            btn.textContent = 'Envoi en cours…';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (res.ok) {
+                    form.style.display = 'none';
+                    successMsg.style.display = 'block';
+                } else {
+                    btn.textContent = 'Erreur — Réessayez';
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                }
+            } catch {
+                btn.textContent = 'Erreur réseau — Réessayez';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            }
+        });
+    </script>
 </body>
 
 </html>

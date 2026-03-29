@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Smart-Admin | HENYCO</title>
+    <meta name="description"
+        content="Automatisez l'analyse et la constitution de vos dossiers administratifs énergétiques (PAC, CEE, RE2020) avec l'agent IA HENYCO Smart-Admin.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="immersive-hero-container">
+        <nav class="glass-nav">
+            <div class="logo">
+                <a href="index.html"><img src="henyco logo.webp" alt="HENYCO Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="solutions-energetiques.html">Solutions Énergétiques</a></li>
+                <li><a href="solutions-ia.html">Solutions IA</a></li>
+                <li><a href="projets.html">Nos Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-background" style="background-image: url('page 5.webp');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="badge-ia" style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Agent IA Propriétaire</div>
+            <h1 class="fade-in">Smart-Admin</h1>
+            <p class="fade-in" style="transition-delay: 0.2s;">Automatisation structurée et intelligente des dossiers administratifs énergétiques (CEE, MaPrimeRénov, RE2020, PEB).</p>
+            <div class="metrics-hero fade-in-up-stagger" style="display: flex; gap: 20px; margin-top: 20px;">
+                <div class="metric">
+                    <span class="metric-value" style="font-size: 2rem; font-weight: 900; color: var(--accent-color);">−80%</span>
+                    <span class="metric-label" style="display: block; font-size: 0.9rem;">de temps administratif</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value" style="font-size: 2rem; font-weight: 900; color: var(--accent-color);">100%</span>
+                    <span class="metric-label" style="display: block; font-size: 0.9rem;">Pré-contrôle éligibilité</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="agent-page">
+
+        <!-- 2. DEMO INTERFACE - UPLOAD & SUIVI -->
+        <section class="agent-demo-section fade-in">
+            <div class="container-agent">
+                <div class="section-headers">
+                    <h2>Traitez vos dossiers en quelques secondes</h2>
+                    <p>Déposez vos rapports, audits ou devis. Smart-Admin extrait, vérifie et compile instantanément.</p>
+                </div>
+
+                <!-- Interface de démonstration IA -->
+                <div class="ia-dashboard-glass">
+                    <!-- Zone Drag & Drop -->
+                    <div class="upload-zone" id="drop-zone">
+                        <img src="ICONS/FILE.svg" alt="Upload Icon" class="upload-icon">
+                        <h3>Glissez-déposez vos documents</h3>
+                        <p>Fichiers supportés : PDF, DOCX, JPG (Devis, DPE, Audits énergétiques)</p>
+                        <button class="btn-secondary">Parcourir les fichiers</button>
+                    </div>
+
+                    <!-- Barre de progression de l'analyse (Cachée par défaut, simulée via CSS/JS) -->
+                    <div class="process-tracker" id="process-tracker" style="display: none;">
+                        <div class="step active">
+                            <div class="step-circle">1</div>
+                            <span>Reçu</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <div class="step-circle">2</div>
+                            <span>Analysé</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <div class="step-circle">3</div>
+                            <span>Vérifié</span>
+                        </div>
+                        <div class="step-line"></div>
+                        <div class="step">
+                            <div class="step-circle">4</div>
+                            <span>Prêt au dépôt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PANNEAU DE RESULTATS (SIMULATION) -->
+        <section class="agent-results-section fade-in">
+            <div class="container-agent">
+                <div class="results-grid">
+                    <!-- Score de Conformité -->
+                    <div class="result-card compliance-card">
+                        <h3>Score de Conformité Global</h3>
+                        <div class="circular-score">
+                            <svg viewBox="0 0 36 36" class="circular-chart">
+                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="98, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage">98%</text>
+                            </svg>
+                        </div>
+                        <p>Dossier éligible aux Certificats d'Économies d'Énergie (CEE).</p>
+                    </div>
+
+                    <!-- Liste des corrections & données extraites -->
+                    <div class="result-card data-card">
+                        <h3>Données Extraites & Vérifications</h3>
+                        <ul class="verification-list">
+                            <li class="success">
+                                <span class="status-icon">✓</span>
+                                <div>
+                                    <strong>Surface chauffée</strong>
+                                    <span>145 m² - Cohérent avec le cadastre</span>
+                                </div>
+                            </li>
+                            <li class="success">
+                                <span class="status-icon">✓</span>
+                                <div>
+                                    <strong>COP de la Pompe à Chaleur</strong>
+                                    <span>Vérifié > 3.4 (Norme EN 14511)</span>
+                                </div>
+                            </li>
+                            <li class="warning">
+                                <span class="status-icon">!</span>
+                                <div>
+                                    <strong>Mention RGE manquante</strong>
+                                    <span>Correction suggérée : "Veuillez contacter l'installateur pour ajouter le SIRET RGE sur le devis final."</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="btn-primary export-btn" style="width:100%; margin-top: 20px;">Exporter le Dossier Complété (PDF)</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-expertise">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="FOOTER LOGO.jpg" alt="HENYCO Logo"></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="solutions-energetiques.html">Solutions Énergétiques</a>
+                    <a href="solutions-ia.html">Solutions IA</a>
+                    <a href="projets.html">Nos Projets</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Contact & Réseaux</h4>
+                <div class="footer-social-row">
+                    <a href="mailto:contact@henyco.com"><img src="ICONS/MAIL.webp" alt="Email"></a>
+                    <a href="https://wa.me/21620669007"><img src="ICONS/WHATSAPP.webp" alt="WhatsApp"></a>
+                    <a href="https://www.linkedin.com/company/henyco" target="_blank"><img src="ICONS/LINKEDIN.webp"
+                            alt="LinkedIn"></a>
+                    <a href="https://x.com/henyco_" target="_blank"><img src="ICONS/X.webp" alt="X"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2026 HENYCO. Tous droits réservés.</p>
+            </div>
+            <div class="legal-links">
+                <a href="#">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple Interaction Simulation for Smart-Admin
+        document.addEventListener('DOMContentLoaded', () => {
+            const dropZone = document.getElementById('drop-zone');
+            const tracker = document.getElementById('process-tracker');
+            
+            if (dropZone && tracker) {
+                dropZone.addEventListener('click', () => {
+                    dropZone.innerHTML = '<h3>Analyse en cours...</h3><p>Lecture des données documentaires via OCR et NLP HENYCO.</p>';
+                    dropZone.style.borderColor = "var(--accent-color)";
+                    
+                    setTimeout(() => {
+                        dropZone.style.display = 'none';
+                        tracker.style.display = 'flex';
+                        
+                        const steps = tracker.querySelectorAll('.step');
+                        let currentStep = 0;
+                        
+                        const interval = setInterval(() => {
+                            if (currentStep < steps.length) {
+                                steps[currentStep].classList.add('active');
+                                currentStep++;
+                            } else {
+                                clearInterval(interval);
+                            }
+                        }, 800);
+                        
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent de Pilotage Prédictif | HENYCO</title>
+    <meta name="description"
+        content="Anticipez la consommation énergétique de vos bâtiments avec l'IA. Prévisions sur 48h, intégration météo et recommandations automatiques.">
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header class="immersive-hero-container">
+        <nav class="glass-nav">
+            <div class="logo">
+                <a href="index.html"><img src="henyco logo.webp" alt="HENYCO Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="solutions-energetiques.html">Solutions Énergétiques</a></li>
+                <li><a href="solutions-ia.html">Solutions IA</a></li>
+                <li><a href="projets.html">Nos Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-background" style="background-image: url('Couverture pages/Couverture 5.webp');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="badge-ia" style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Agent IA Propriétaire</div>
+            <h1 class="fade-in">Pilotage Prédictif</h1>
+            <p class="fade-in" style="transition-delay: 0.2s;">L’intelligence artificielle qui anticipe votre consommation thermique (PAC) en croisant météo, occupation et inertie du bâtiment.</p>
+            <div class="metrics-hero fade-in-up-stagger" style="display: flex; gap: 20px; margin-top: 20px;">
+                <div class="metric">
+                    <span class="metric-value" style="font-size: 2rem; font-weight: 900; color: var(--accent-color);">−15% à −20%</span>
+                    <span class="metric-label" style="display: block; font-size: 0.9rem;">Économies sur la facture énergétique</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value" style="font-size: 2rem; font-weight: 900; color: var(--accent-color);">48H</span>
+                    <span class="metric-label" style="display: block; font-size: 0.9rem;">Capacité d'anticipation météo</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-value" style="font-size: 2rem; font-weight: 900; color: var(--accent-color);">A+</span>
+                    <span class="metric-label" style="display: block; font-size: 0.9rem;">Score d'efficacité visé</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="agent-page">
+
+        <section class="agent-demo-section fade-in">
+            <div class="container-agent">
+                <!-- WIZARD PROFIL BATIMENT & ALERTS -->
+                <div class="dashboard-grid">
+                    
+                    <!-- Formulaire / Profil du bâtiment -->
+                    <div class="wizard-panel ia-dashboard-glass">
+                        <h3>Configuration Bâtiment (Wizard)</h3>
+                        <p style="margin-bottom: 25px; color: var(--text-secondary);">Renseignez les paramètres pour calibrer l'agent IA.</p>
+                        
+                        <form id="building-wizard" class="minimal-form">
+                            <div class="form-group">
+                                <label for="buildType" class="wizard-label">Type de Bâtiment</label>
+                                <select id="buildType" required>
+                                    <option value="" disabled selected>Sélectionner...</option>
+                                    <option value="tertiaire">Bureaux / Tertiaire</option>
+                                    <option value="industriel">Industriel</option>
+                                    <option value="residentiel">Résidentiel Collectif</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="buildSurface" class="wizard-label">Surface chauffée (m²)</label>
+                                <input type="number" id="buildSurface" placeholder="Ex: 500" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="buildEquip" class="wizard-label">Équipement Principal</label>
+                                <select id="buildEquip" required>
+                                    <option value="" disabled selected>Sélectionner...</option>
+                                    <option value="pac_air_eau">PAC Air/Eau</option>
+                                    <option value="pac_geo">PAC Géothermique</option>
+                                    <option value="hybride">Hybride (PAC + Gaz)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 15px;">Mettre à jour le modèle</button>
+                        </form>
+                        
+                        <div id="wizard-success" class="wizard-success-msg" style="display:none; color: #1D9E75; font-weight: 700; margin-top: 20px;">
+                            ✓ Profil sauvegardé localement ! Calculs mis à jour.
+                        </div>
+                    </div>
+
+                    <!-- Alertes & Recommandations -->
+                    <div class="alerts-panel ia-dashboard-glass">
+                        <h3>Alertes & Recommandations</h3>
+                        <div class="alerts-container" id="alerts-container">
+                            <div class="alert-box alert-warming">
+                                <span class="alert-icon">🌤️</span>
+                                <div class="alert-content">
+                                    <strong>Redoux thermique anticipé (Demain 14:00)</strong>
+                                    <p>La température extérieure va monter à 18°C. L'agent réduira la PAC dès 12h00 pour éviter la surchauffe.</p>
+                                </div>
+                            </div>
+                            <div class="alert-box alert-cold">
+                                <span class="alert-icon">❄️</span>
+                                <div class="alert-content">
+                                    <strong>Chute de température (Cette nuit 03:00)</strong>
+                                    <p>Préchauffage conseillé du bâtiment grâce à l'inertie lors des heures creuses (01h-04h).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- DASHBOARD CHART.JS -->
+                <div class="chart-panel ia-dashboard-glass mt-40">
+                    <div class="chart-header">
+                        <div>
+                            <h3>Dashboard Temps Réel : Consommation vs Prévision</h3>
+                            <p>Données connectées via Open-Meteo (Paris, FR) + Facteur IA</p>
+                        </div>
+                        <div class="score-badge">Score Actuel : <strong>A</strong></div>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="predictionChart"></canvas>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-expertise">
+                <div class="footer-logo">
+                    <a href="index.html"><img src="FOOTER LOGO.jpg" alt="HENYCO Logo"></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <div class="footer-links">
+                    <a href="index.html">Accueil</a>
+                    <a href="solutions-energetiques.html">Solutions Énergétiques</a>
+                    <a href="solutions-ia.html">Solutions IA</a>
+                    <a href="projets.html">Nos Projets</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Contact & Réseaux</h4>
+                <div class="footer-social-row">
+                    <a href="mailto:contact@henyco.com"><img src="ICONS/MAIL.webp" alt="Email"></a>
+                    <a href="https://wa.me/21620669007"><img src="ICONS/WHATSAPP.webp" alt="WhatsApp"></a>
+                    <a href="https://www.linkedin.com/company/henyco" target="_blank"><img src="ICONS/LINKEDIN.webp"
+                            alt="LinkedIn"></a>
+                    <a href="https://x.com/henyco_" target="_blank"><img src="ICONS/X.webp" alt="X"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                <p>© 2026 HENYCO. Tous droits réservés.</p>
+            </div>
+            <div class="legal-links">
+                <a href="#">Mentions Légales</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            // -- 1. WIZARD LOCALSTORAGE LOGIC --
+            const wizardForm = document.getElementById('building-wizard');
+            const savedSurface = localStorage.getItem('henyco_buildSurface');
+            const savedType = localStorage.getItem('henyco_buildType');
+            const savedEquip = localStorage.getItem('henyco_buildEquip');
+
+            if (savedSurface) document.getElementById('buildSurface').value = savedSurface;
+            if (savedType) document.getElementById('buildType').value = savedType;
+            if (savedEquip) document.getElementById('buildEquip').value = savedEquip;
+
+            wizardForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                localStorage.setItem('henyco_buildType', document.getElementById('buildType').value);
+                localStorage.setItem('henyco_buildSurface', document.getElementById('buildSurface').value);
+                localStorage.setItem('henyco_buildEquip', document.getElementById('buildEquip').value);
+                
+                const msg = document.getElementById('wizard-success');
+                msg.style.display = 'block';
+                setTimeout(() => msg.style.display = 'none', 3000);
+                
+                // Mettre à jour virtuellement le graph
+                renderChart(true);
+            });
+
+            // -- 2. FETCH OPEN-METEO & CHART.JS --
+            const ctx = document.getElementById('predictionChart').getContext('2d');
+            let myChart = null;
+
+            async function fetchWeatherData() {
+                try {
+                    // Fetch for Paris coordinates
+                    const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=48.8566&longitude=2.3522&hourly=temperature_2m&timezone=Europe%2FParis&forecast_days=2');
+                    const data = await response.json();
+                    return data.hourly;
+                } catch (error) {
+                    console.error("Open-meteo fetch error:", error);
+                    return null;
+                }
+            }
+
+            async function renderChart(refresh = false) {
+                const hourlyData = await fetchWeatherData();
+                if (!hourlyData) return;
+
+                // On prend les 48 prochaines heures
+                const labels = hourlyData.time.slice(0, 48).map(t => new Date(t).getHours() + "h");
+                const temps = hourlyData.temperature_2m.slice(0, 48);
+                
+                // Facteur "IA" simulé (Consommation inversément proportionnelle à la température extérieure + facteur IA)
+                // Base surface du localstorage
+                const surfaceBase = parseInt(localStorage.getItem('henyco_buildSurface')) || 500;
+                const coef = surfaceBase / 100;
+
+                const baseConsumption = temps.map(t => Math.max(0, (20 - t) * coef * 2));
+                // Sans IA : la pac tourne brutalement
+                const consReal = baseConsumption.map(t => t + Math.random() * 5);
+                // Avec IA Hendyco : Lissage et optimisation
+                const consIA = baseConsumption.map((t, index) => {
+                    // Pré-chauffage aux heures creuses (ex: index 2, 3, 4)
+                    let optim = t * 0.85; // -15% base
+                    return optim;
+                });
+
+                if (myChart) {
+                    myChart.destroy();
+                }
+
+                myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: labels,
+                        datasets: [
+                            {
+                                label: 'T° Extérieure Prévue (°C)',
+                                data: temps,
+                                borderColor: '#FFCC00',
+                                backgroundColor: 'transparent',
+                                borderDash: [5, 5],
+                                yAxisID: 'yTempo',
+                                tension: 0.4
+                            },
+                            {
+                                label: 'Conso Standard (kW)',
+                                data: consReal,
+                                borderColor: '#E0E0E0',
+                                backgroundColor: 'rgba(224, 224, 224, 0.1)',
+                                yAxisID: 'yCons',
+                                tension: 0.4,
+                                fill: true
+                            },
+                            {
+                                label: 'Conso avec Agent IA (kW)',
+                                data: consIA,
+                                borderColor: '#002E5D',
+                                backgroundColor: 'rgba(0, 46, 93, 0.2)',
+                                yAxisID: 'yCons',
+                                tension: 0.4,
+                                fill: true,
+                                borderWidth: 3
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false },
+                        scales: {
+                            yCons: {
+                                type: 'linear',
+                                display: true,
+                                position: 'left',
+                                title: { display: true, text: 'Consommation (kW)' }
+                            },
+                            yTempo: {
+                                type: 'linear',
+                                display: true,
+                                position: 'right',
+                                title: { display: true, text: 'Température (°C)' },
+                                grid: { drawOnChartArea: false }
+                            }
+                        },
+                        plugins: {
+                            legend: { position: 'top' }
+                        }
+                    }
+                });
+            }
+
+            renderChart();
+        });
+    </script>
+</body>
+
+</html>

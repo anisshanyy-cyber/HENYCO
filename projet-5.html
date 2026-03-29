@@ -4,88 +4,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plan de Décarbonation (Bruxelles) | HENYCO</title>
+    <title>Smart-Admin | HENYCO</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .kpi-card {
+            background: rgba(0, 46, 93, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .vs-block {
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .vs-side {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .vs-left {
+            background: #F8F9FA;
+            color: var(--text-secondary);
+        }
+
+        .vs-right {
+            background: rgba(0, 46, 93, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            position: relative;
+        }
+
+        .flow-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .flow-step {
+            background: var(--light-bg);
+            padding: 15px 25px;
+            border-radius: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .flow-step.active {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .flow-step.success {
+            background: #2ECC71;
+            color: white;
+        }
+
+        .flow-arrow {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .expertise-banner {
+            background: rgba(0, 46, 93, 0.05);
+            padding: 60px 40px;
+            border-radius: 24px;
+            text-align: center;
+            border-left: 6px solid var(--accent-color);
+            margin-bottom: 60px;
+        }
+
+        .expertise-banner p.quote {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 900;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <div class="logo"><a href="index.html"><img src="henyco logo.webp" alt="HENYCO Logo"></a></div>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="solutions-energetiques.html">Solutions Énergétiques</a></li>
-            <li><a href="solutions-ia.html">Solutions IA</a></li>
-            <li><a href="projets.html">Nos Projets</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-
-    </nav>
-
-    <header class="hero-section">
-        <div class="hero-background" style="background-image: url('page 5.webp');">
-        </div>
+    <header class="immersive-hero-container">
+        <nav class="glass-nav">
+            <div class="logo">
+                <a href="index.html"><img src="henyco logo.webp" alt="HENYCO Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="solutions-energetiques.html">Solutions Énergétiques</a></li>
+                <li><a href="solutions-ia.html">Solutions IA</a></li>
+                <li><a href="projets.html">Nos Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-background" style="background-image: url('page 5.webp');"></div>
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span
-                style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Innovation
-                | Intelligence Artificielle</span>
-            <h1 class="fade-in">L'IA au Service de l'Ingénierie : Diagnostic Bâtiment</h1>
-            <p class="fade-in" style="transition-delay: 0.2s;">Déploiement d'un Agent IA propriétaire pour une analyse
-                thermique et architecturale ultra-précise.</p>
+            <span style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">SOLUTIONS IA</span>
+            <h1 class="fade-in" style="font-family: 'Montserrat', sans-serif; font-weight: 900;">Smart-Admin : quand l'intelligence artificielle sécurise vos dossiers énergétiques</h1>
+            <p class="fade-in" style="transition-delay: 0.2s; font-family: 'Roboto', sans-serif;">Un agent IA qui transforme radicalement la gestion administrative des projets énergétiques.</p>
         </div>
     </header>
 
-    <main class="section-intro" style="text-align: left; background: white;">
-        <div class="container" style="max-width: 1000px;">
-            <div class="feature-block">
-                <div class="feature-content">
-                    <h2>Une Efficacité Multipliée par 7</h2>
-                    <p>Dans un secteur où la précision et la rapidité sont cruciales, HENYCO a développé un Agent IA
-                        capable d'analyser la performance thermique des bâtiments avec une puissance de traitement
-                        inégalée. Nous assurons un gain de temps de 85% sur les phases d'analyse technique.</p>
+    <main class="section-intro" style="text-align: left; background: white; padding-bottom: 100px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
 
-                    <h2 style="margin-top: 40px;">Double Expertise : Visuelle & Thermique</h2>
-                    <ul style="margin: 20px 0; padding-left: 20px;">
-                        <li><strong>Analyse Architecturale :</strong> Identification automatique des structures, des
-                            matériaux et des points de vigilance sur les façades.</li>
-                        <li><strong>Diagnostic Thermique Avancé :</strong> Analyse pixel par pixel des images capturées
-                            par caméras thermiques pour détecter les ponts thermiques invisibles à l'œil nu.</li>
-                    </ul>
+            <!-- Section Tableaux de Bord (KPIs) -->
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 80px; margin-top: -30px;">
+                <!-- Card 1 -->
+                <div class="kpi-card fade-in">
+                    <h2 style="color: var(--accent-color); font-size: 3.5rem; margin-bottom: 10px; font-weight: 900;">
+                        -80%</h2>
+                    <p style="color: white; font-size: 1.1rem; font-weight: 500;">de temps administratif par dossier.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="kpi-card fade-in" style="transition-delay: 0.1s;">
+                    <h2 style="color: var(--accent-color); font-size: 3.5rem; margin-bottom: 10px; font-weight: 900;">
+                        10% </h2>
+                    <p style="color: white; font-size: 1.1rem; font-weight: 500;">erreur de conformité détectée.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="kpi-card fade-in" style="transition-delay: 0.2s;">
+                    <h2 style="color: var(--accent-color); font-size: 3.5rem; margin-bottom: 10px; font-weight: 900;">
+                        100%</h2>
+                    <p style="color: white; font-size: 1.1rem; font-weight: 500;">des dossiers prêts à déposer.</p>
                 </div>
             </div>
 
-            <div class="feature-block" style="margin-top: 40px;">
-                <div class="feature-content">
-                    <h2>L'IA assiste, l'Ingénieur valide</h2>
-                    <p>La technologie ne remplace pas l'expert, elle le rend plus performant. Notre agent génère un
-                        rapport structuré privilégiant les anomalies critiques, permettant à nos ingénieurs de se
-                        concentrer sur le conseil stratégique.</p>
-                    <div style="background: var(--light-bg); padding: 30px; border-radius: 12px; margin-top: 20px;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr style="border-bottom: 2px solid var(--primary-color);">
-                                <th style="text-align: left; padding: 10px;">Indicateur</th>
-                                <th style="text-align: left; padding: 10px;">Méthode Traditionnelle</th>
-                                <th style="text-align: left; padding: 10px;">Solution IA</th>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Délai de traitement</td>
-                                <td style="padding: 10px;">Plusieurs jours</td>
-                                <td style="padding: 10px; font-weight: 700; color: var(--primary-color);">Quelques
-                                    heures</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Précision thermique</td>
-                                <td style="padding: 10px;">Subjective / Manuelle</td>
-                                <td style="padding: 10px; font-weight: 700; color: var(--primary-color);">Pixel par
-                                    Pixel</td>
-                            </tr>
-                        </table>
+            <!-- Section Problématique vs Solution -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="text-align: center; margin-bottom: 40px; background: white; padding: 20px;">
+                    <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Le Défi Administratif</h2>
+                    <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: var(--text-secondary);">
+                        Aujourd'hui, les acteurs du secteur passent <strong>30 à 40% de leur temps</strong> sur des
+                        tâches administratives à faible valeur ajoutée.</p>
+                </div>
+
+                <div class="vs-block">
+                    <!-- Gauche : Sans Agent IA -->
+                    <div class="vs-side vs-left">
+                        <h3 style="color: #666; margin-bottom: 30px; font-size: 1.8rem;">Sans Agent IA</h3>
+                        <ul
+                            style="list-style: none; padding: 0; text-align: left; max-width: 300px; margin: 0 auto; font-size: 1.1rem;">
+                            <li style="margin-bottom: 20px; position: relative; padding-left: 35px;"><span
+                                    style="position: absolute; left: 0; color: #E74C3C; font-size: 1.2rem;">❌</span>
+                                Vérification manuelle</li>
+                            <li style="margin-bottom: 20px; position: relative; padding-left: 35px;"><span
+                                    style="position: absolute; left: 0; color: #E74C3C; font-size: 1.2rem;">❌</span>
+                                Délais de 5 à 8 jours</li>
+                            <li style="position: relative; padding-left: 35px;"><span
+                                    style="position: absolute; left: 0; color: #E74C3C; font-size: 1.2rem;">❌</span>
+                                Risque élevé de refus</li>
+                        </ul>
+                    </div>
+                    <!-- Droite : Avec Smart-Admin -->
+                    <div class="vs-side vs-right">
+                        <h3 style="color: var(--accent-color); margin-bottom: 30px; font-size: 1.8rem;">Avec Smart-Admin
+                        </h3>
+                        <ul
+                            style="list-style: none; padding: 0; text-align: left; max-width: 300px; margin: 0 auto; color: white; font-size: 1.1rem;">
+                            <li style="margin-bottom: 20px; position: relative; padding-left: 35px;"><span
+                                    style="position: absolute; left: 0; color: #2ECC71; font-size: 1.2rem;">✅</span>
+                                Analyse instantanée</li>
+                            <li style="margin-bottom: 20px; position: relative; padding-left: 35px;"><span
+                                    style="position: absolute; left: 0; color: #2ECC71; font-size: 1.2rem;">✅</span>
+                                Pré-contrôle des aides</li>
+                            <li style="position: relative; padding-left: 35px;"><span
+                                    style="position: absolute; left: 0; color: #2ECC71; font-size: 1.2rem;">✅</span>
+                                Dossier 100% conforme</li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <div style="margin-top: 60px; text-align: center;">
-                <a href="projets.html" class="btn-primary">Retour aux projets</a>
+            <!-- Section Flux de Traitement (Infographie) -->
+            <div style="margin-bottom: 80px; text-align: center;" class="fade-in">
+                <h2 style="font-size: 2.2rem;">Le Flux de Traitement</h2>
+                <div class="flow-container">
+                    <div class="flow-step">Audit / Devis / Rapport</div>
+                    <div class="flow-arrow">&rarr;</div>
+                    <div class="flow-step active">Smart-Admin</div>
+                    <div class="flow-arrow">&rarr;</div>
+                    <div class="flow-step">Analyse & vérification</div>
+                    <div class="flow-arrow">&rarr;</div>
+                    <div class="flow-step">Pré-contrôle aides</div>
+                    <div class="flow-arrow">&rarr;</div>
+                    <div class="flow-step success">Dossier conforme ✅</div>
+                </div>
             </div>
+
+            <!-- Section Expertise (Citation) -->
+            <div class="expertise-banner fade-in">
+                <p class="quote">&laquo; Vous gérez le terrain. Smart-Admin sécurise l'exécution. &raquo;</p>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center;" class="fade-in">
+                <a href="contact.html" class="btn-primary"
+                    style="font-size: 1.2rem; padding: 20px 50px; border-radius: 50px;">Parler à un expert HENYCO</a>
+            </div>
+
         </div>
     </main>
 
