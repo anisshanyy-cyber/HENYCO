@@ -4,8 +4,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conformité RE2020 | HENYCO</title>
+    <title>Étude de Cas | Photovoltaïque Genève – HENYCO</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .pv-card {
+            background: rgba(0, 46, 93, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 36px;
+            width: 100%;
+            border-radius: 24px;
+            position: relative;
+        }
+
+        .pv-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+        }
+
+        .pv-card-title {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            margin-bottom: 24px;
+        }
+
+        .calepin-svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .prod-chart {
+            margin-top: 20px;
+        }
+
+        .prod-chart-title {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            height: 56px;
+        }
+
+        .bar-wrap {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            height: 100%;
+        }
+
+        .bar-inner {
+            width: 100%;
+            background: var(--accent-color);
+            border-radius: 2px;
+            opacity: 0.85;
+            transition: opacity 0.2s;
+        }
+
+        .bar-inner:hover {
+            opacity: 1;
+        }
+
+        .bar-month {
+            font-size: 10px;
+            color: var(--text-secondary);
+        }
+
+        .prod-total {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .prod-total-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .prod-total-num {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .etude-item {
+            background: rgba(0, 46, 93, 0.05);
+            border-radius: 24px;
+            padding: 38px 30px;
+            position: relative;
+            transition: background 0.3s;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .etude-item:hover {
+            background: rgba(0, 46, 93, 0.1);
+        }
+
+        .etude-num {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .etude-spec {
+            margin-top: 14px;
+            padding: 10px 14px;
+            background: rgba(240, 180, 41, 0.1);
+            border-left: 2px solid var(--accent-color);
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .tech-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-radius: 16px;
+            padding: 20px;
+            background: rgba(0, 46, 93, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-row::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--accent-color);
+        }
+
+        .tech-icon {
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
+        }
+
+        .final-kpis {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .fkpi {
+            background: rgba(0, 46, 93, 0.95);
+            border-radius: 24px;
+            padding: 32px 24px;
+            color: white;
+            border-bottom: 4px solid var(--accent-color);
+        }
+
+        .fkpi-num {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .doc-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .doc-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-radius: 16px;
+            padding: 15px 20px;
+            background: rgba(0, 46, 93, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .calepin-visual {
+            background: rgba(0, 46, 93, 0.03);
+            border-radius: 24px;
+            padding: 28px;
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
 
 <body>
@@ -25,61 +227,216 @@
         <div class="hero-background" style="background-image: url('page 4.webp');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Étude de Cas | Photovoltaïque & Ingénierie</span>
-            <h1 class="fade-in">Expertise Photovoltaïque - 14.24 kWp (Genève)</h1>
-            <p class="fade-in" style="transition-delay: 0.2s;">Étude d'ingénierie complète pour une installation solaire résidentielle à Vésenaz (Suisse).</p>
+            <span
+                style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Étude
+                de Cas | Photovoltaïque & Ingénierie</span>
+            <h1 class="fade-in">Expertise Photovoltaïque - 14.24 kWp</h1>
+            <p class="fade-in" style="transition-delay: 0.2s;">Étude d'ingénierie complète pour une installation solaire
+                résidentielle.</p>
         </div>
     </header>
 
-    <main class="section-intro" style="text-align: left; background: white;">
-        <div class="container" style="max-width: 1000px;">
-            <div class="feature-block">
-                <div class="feature-content">
-                    <h2>L'Ingénierie au service de l'Énergie Solaire</h2>
-                    <p>Pour ce projet, nous avons réalisé une étude d'ingénierie complète
-                        garantissant productivité maximale, sécurité structurelle et conformité électrique. Une
-                        installation photovoltaïque est un investissement sur 25 ans qui nécessite une précision
-                        absolue.</p>
+    <main class="section-intro" style="text-align: left; background: white; padding-bottom: 100px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
 
-                    <h2 style="margin-top: 40px;">Études Techniques Réalisées</h2>
-                    <ul style="margin: 20px 0; padding-left: 20px;">
-                        <li><strong>Modélisation PVGIS :</strong> Optimisation de l'orientation et de l'inclinaison pour
-                            une production annuelle estimée à ~14 513 kWh.</li>
-                        <li><strong>Architecture SolarEdge :</strong> Utilisation d'optimiseurs S500B pour annuler les
-                            pertes dues aux ombrages et configuration SafeDC.</li>
-                        <li><strong>Calcul Statique K2 Systems :</strong> Vérification de la résistance mécanique face à
-                            la neige et au vent avec le système S-Dome 6.10.</li>
-                    </ul>
+            <!-- ETUDES TECHNIQUES -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span
+                        style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Études
+                        Techniques Réalisées</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">L'ingénierie au service de l'énergie solaire</h2>
                 </div>
-            </div>
 
-            <div class="feature-block" style="margin-top: 40px;">
-                <div class="feature-content">
-                    <h2>Précision du Calepinage</h2>
-                    <p>Nous livrons une ingénierie complète incluant les plans de calepinage 2D/3D et les rapports de
-                        Stringing pour une mise en œuvre sans faille.</p>
-                    <img src="Projet 4/calepinage.webp" alt="Plan de Calepinage"
-                        style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                </div>
-            </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <div class="etude-item fade-in">
+                        <div class="etude-num">01</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Modélisation nergétique</h3>
+                        <p style="font-size: 1rem;">Optimisation de l'orientation et de l'inclinaison des panneaux par
+                            simulation sur le logiciel européen de référence PVGIS, intégrant les données d'irradiance
+                            solaire propres à Vésenaz et les masques d'ombrage.</p>
+                        <div class="etude-spec">Production annuelle estimée : ~14 513 kWh</div>
+                    </div>
 
-            <div class="feature-block" style="margin-top: 40px;">
-                <div class="feature-content">
-                    <h2>Synthèse Technique</h2>
-                    <div style="background: var(--light-bg); padding: 30px; border-radius: 12px;">
-                        <ul style="list-style: none; padding: 0;">
-                            <li>☀️ <strong>Puissance Installée :</strong> 14.24 kWp</li>
-                            <li>🔋 <strong>Technologie :</strong> SolarEdge (Optimiseurs + Onduleur)</li>
-                            <li>🏗️ <strong>Structure :</strong> K2 Systems (Calcul statique inclus)</li>
-                            <li>📈 <strong>Production :</strong> ~14 513 kWh / an</li>
-                        </ul>
+                    <div class="etude-item fade-in" style="transition-delay: 0.1s;">
+                        <div class="etude-num">02</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Architecture électrique</h3>
+                        <p style="font-size: 1rem;">Choix et dimensionnement des optimiseurs pour annuler les pertes
+                            liées aux ombrages partiels et garantir le suivi individuel de chaque panneau. Configuration
+                            SafeDC pour la sécurité.</p>
+                        <div class="etude-spec">Optimiseurs S500B + Onduleur SolarEdge</div>
+                    </div>
+
+                    <div class="etude-item fade-in" style="transition-delay: 0.2s;">
+                        <div class="etude-num">03</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Calcul Statique des charges</h3>
+                        <p style="font-size: 1rem;">Vérification de la résistance mécanique de la toiture et des
+                            fixations face aux charges de neige et de vent conformément aux normes, via le système de
+                            fixation.</p>
+                        <div class="etude-spec">K2 Systems · S-Dome 6.10 · Neige + Vent CH</div>
                     </div>
                 </div>
             </div>
 
-            <div style="margin-top: 60px; text-align: center;">
-                <a href="projets.html" class="btn-primary">Retour aux projets</a>
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 60px 0;">
+
+            <!-- SYNTHESE TECHNIQUE -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span
+                        style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Synthèse
+                        Technique</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Une stack technologique de référence</h2>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; align-items: start;">
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div class="tech-row fade-in">
+                            <div class="tech-icon"><span style="font-size: 2rem;">☀️</span></div>
+                            <div style="flex: 1;">
+                                <div style="font-size: 1.1rem; font-weight: bold; color: var(--primary-color);">PVGIS ·
+                                    Modélisation Solaire</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary);">Simulation irradiance ·
+                                    Optimisation orientation/inclinaison</div>
+                            </div>
+                            <div style="font-weight: 700; color: var(--accent-color);">~14.5 MWh/an</div>
+                        </div>
+
+                        <div class="tech-row fade-in" style="transition-delay: 0.1s;">
+                            <div class="tech-icon"><span style="font-size: 2rem;">⚡</span></div>
+                            <div style="flex: 1;">
+                                <div style="font-size: 1.1rem; font-weight: bold; color: var(--primary-color);">
+                                    SolarEdge · Optimiseurs S500B</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary);">Anti-ombrage · Monitoring
+                                    individuel · Configuration SafeDC</div>
+                            </div>
+                            <div style="font-weight: 700; color: var(--accent-color);">14.24 kWp</div>
+                        </div>
+
+                        <div class="tech-row fade-in" style="transition-delay: 0.2s;">
+                            <div class="tech-icon"><span style="font-size: 2rem;">🏗️</span></div>
+                            <div style="flex: 1;">
+                                <div style="font-size: 1.1rem; font-weight: bold; color: var(--primary-color);">K2
+                                    Systems · S-Dome 6.10</div>
+                                <div style="font-size: 0.9rem; color: var(--text-secondary);">Calcul statique certifié ·
+                                    Résistance neige + vent · Normes CH</div>
+                            </div>
+                            <div style="font-weight: 700; color: var(--accent-color);">Certifié</div>
+                        </div>
+                    </div>
+
+                    <!-- Graphique & Calepinage visuel -->
+                    <div class="calepin-visual fade-in" style="transition-delay: 0.3s;">
+                        <span
+                            style="font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 20px; display: block;">Plan
+                            de Calepinage </span>
+
+                        <!-- Photo de calepinage remplaçant le SVG -->
+                        <img src="Projet 4/12.webp" alt="Plan de Calepinage Vésenaz"
+                            style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+
+                        <p
+                            style="text-align: center; margin-top: 15px; font-weight: bold; color: var(--primary-color);">
+                            32 modules · 445 Wc/u · Calepinage 2D</p>
+                    </div>
+                </div>
             </div>
+
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 60px 0;">
+
+            <!-- CALEPINAGE / DOCUMENTATION -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span
+                        style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Précision
+                        du Calepinage</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Une liasse documentaire complète & certifiée</h2>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; align-items: start;">
+                    <div>
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                            Une installation photovoltaïque est un investissement sur <strong
+                                style="color:var(--primary-color);">25 ans</strong>. Toute erreur de conception se
+                            traduit par des pertes de production permanentes et des risques structurels.
+                        </p>
+                        <p style="font-size: 1.1rem; margin-bottom: 30px;">
+                            Notre approche garantit une mise en œuvre sans faille grâce à une documentation technique
+                            exhaustive couvrant les aspects électriques, structurels et productifs.
+                        </p>
+
+                        <div class="doc-list">
+                            <div class="doc-item">
+                                <div style="font-size: 1.5rem;">📐</div>
+                                <div>
+                                    <div style="font-weight: bold; color: var(--primary-color);">Plans de calepinage 2D
+                                        et 3D</div>
+                                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Positionnement précis
+                                        des modules · Zones d'accès</div>
+                                </div>
+                            </div>
+                            <div class="doc-item">
+                                <div style="font-size: 1.5rem;">⚡</div>
+                                <div>
+                                    <div style="font-weight: bold; color: var(--primary-color);">Rapports de Stringing
+                                    </div>
+                                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Association des
+                                        strings · Vérification des tolérances</div>
+                                </div>
+                            </div>
+                            <div class="doc-item">
+                                <div style="font-size: 1.5rem;">📈</div>
+                                <div>
+                                    <div style="font-weight: bold; color: var(--primary-color);">Calcul statique &
+                                        Simulation</div>
+                                    <div style="font-size: 0.9rem; color: var(--text-secondary);">Résistance mécanique
+                                        K2 · Production PVGIS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Images + KPIs finaux -->
+                    <div>
+                        <div class="final-kpis" style="margin-top: 0; margin-bottom: 30px;">
+                            <div class="fkpi">
+                                <div class="fkpi-num">14.24 <span style="font-size: 1.2rem; color: white;">kWp</span>
+                                </div>
+                                <div style="font-size: 0.9rem;">Puissance crête installée</div>
+                            </div>
+                            <div class="fkpi" style="background: var(--primary-color);">
+                                <div class="fkpi-num" style="color: white; font-size: 1.8rem;">SolarEdge</div>
+                                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.8);">Optimiseurs + Onduleur
+                                </div>
+                            </div>
+                            <div class="fkpi" style="background: var(--primary-color);">
+                                <div class="fkpi-num" style="color: white; font-size: 1.8rem;">K2 Systems</div>
+                                <div style="font-size: 0.9rem; color: rgba(255,255,255,0.8);">Système de fixation</div>
+                            </div>
+                            <div class="fkpi">
+                                <div class="fkpi-num">~14.5 <span style="font-size: 1.2rem; color: white;">MWh</span>
+                                </div>
+                                <div style="font-size: 0.9rem;">Production annuelle projetée</div>
+                            </div>
+                        </div>
+
+                        <!-- L'image existante du plan de calepinage -->
+                        <img src="Projet 4/calepinage.webp" alt="Plan de Calepinage"
+                            style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- BACK -->
+            <div style="text-align: center;" class="fade-in">
+                <a href="projets.html" class="btn-primary"
+                    style="font-size: 1.1rem; padding: 15px 40px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px;">
+                    <span>&larr;</span> Retour aux projets
+                </a>
+            </div>
+
         </div>
     </main>
 

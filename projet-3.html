@@ -4,8 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimisation Photovoltaïque (Lyon) | HENYCO</title>
+    <title>Étude de Cas | DTG Copropriété – HENYCO</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .kpi-card {
+            background: rgba(0, 46, 93, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .pillar-card {
+            background: rgba(0, 46, 93, 0.05);
+            border-radius: 24px;
+            padding: 40px;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .software-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--light-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .software-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 46, 93, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,62 +82,218 @@
         <div class="hero-background" style="background-image: url('page 3.webp');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Étude de Cas | Copropriété & DTG</span>
+            <span
+                style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Étude
+                de Cas | Copropriété & DTG</span>
             <h1 class="fade-in">Diagnostic Technique Global (DTG) & Audit Énergétique</h1>
-            <p class="fade-in" style="transition-delay: 0.2s;">Accompagnement d'une copropriété de 4 752 m² à Paris 17ème pour une rénovation durable.</p>
+            <p class="fade-in" style="transition-delay: 0.2s;">Accompagnement d'une copropriété de 4 752 m² à Paris
+                17ème pour une rénovation durable.</p>
         </div>
     </header>
 
-    <main class="section-intro" style="text-align: left; background: white;">
-        <div class="container" style="max-width: 1000px;">
-            <div class="feature-block">
-                <div class="feature-content">
-                    <h2>Une Analyse Multidimensionnelle</h2>
-                    <p>Pour cet ensemble immobilier d'envergure, nous avons réalisé une mission complète de Diagnostic
-                        Technique Global (DTG), combinant analyse du bâti, audit énergétique et planification financière
-                        sur 10 ans. La réussite de ce projet repose sur quatre piliers fondamentaux :</p>
-                    <ul style="margin: 20px 0; padding-left: 20px;">
-                        <li><strong>Analyse de l'état du Bâti :</strong> Examen approfondi des façades, de la toiture et
-                            des équipements techniques pour identifier les besoins de maintenance.</li>
-                        <li><strong>Audit Énergétique Réglementaire :</strong> Simulation thermique réalisée sur les
-                            logiciels métiers de référence (BAO / Bati-Audit).</li>
-                        <li><strong>Plan Pluriannuel de Travaux (PPT) :</strong> Création d'une feuille de route
-                            stratégique hiérarchisée par urgence (immédiat, 5 ans, 10 ans).</li>
-                        <li><strong>Optimisation Financière :</strong> Intégration des aides (MaPrimeRénov' Copropriété,
-                            CEE) pour minimiser le reste à charge.</li>
-                    </ul>
-                </div>
-            </div>
+    <main class="section-intro" style="text-align: left; background: white; padding-bottom: 100px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
 
-            <div class="feature-block" style="margin-top: 40px;">
-                <div class="feature-content">
-                    <h2>Expertise Logicielle & Simulation</h2>
-                    <p>L'utilisation des outils certifiés nous a permis de fournir une modélisation fidèle de la
-                        structure thermique du bâtiment et de proposer des scénarios de travaux "sur-mesure" visant un
-                        gain énergétique minimum de 35%.</p>
-                    <img src="Projet 3/les-coproprietaires-de-la-residence-constellation-ont-ete-plus-de-60-a-voter-les-travaux-en-septembre-2021-c-est-un-bon-taux-il-est-plutot-autour-de-50-en-general-pour-les-grosses-copropriete.webp"
-                        alt="Vote des Copropriétaires"
-                        style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <!-- 4 PILLIERS -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span
+                        style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Une
+                        Analyse Multidimensionnelle</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Quatre piliers d'une mission DTG complète</h2>
                 </div>
-            </div>
 
-            <div class="feature-block" style="margin-top: 40px;">
-                <div class="feature-content">
-                    <h2>Chiffres Clés du Projet</h2>
-                    <div style="background: var(--light-bg); padding: 30px; border-radius: 12px;">
-                        <ul style="list-style: none; padding: 0;">
-                            <li>🏢 <strong>Surface Habitable :</strong> 4 752 m²</li>
-                            <li>📍 <strong>Localisation :</strong> Paris 17ème</li>
-                            <li>📊 <strong>Logiciels :</strong> BAO / Bati-Audit</li>
-                            <li>✅ <strong>Objectif :</strong> Gain énergétique > 35%</li>
-                        </ul>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <!-- Pillar 1 -->
+                    <div class="pillar-card fade-in">
+                        <div
+                            style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">
+                            01</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Analyse de l'État du Bâti</h3>
+                        <p style="font-size: 1rem;">Examen approfondi des façades, de la toiture et de l'ensemble des
+                            équipements techniques pour identifier précisément les besoins de maintenance immédiate et à
+                            venir, et hiérarchiser les interventions.</p>
+                        <div
+                            style="margin-top: 20px; font-size: 0.85rem; font-weight: 700; color: var(--primary-color); background: rgba(0,46,93,0.1); padding: 5px 15px; border-radius: 50px; display: inline-block;">
+                            Inspection terrain · Rapport photographique</div>
+                    </div>
+
+                    <!-- Pillar 2 -->
+                    <div class="pillar-card fade-in" style="transition-delay: 0.1s;">
+                        <div
+                            style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">
+                            02</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Audit Énergétique Réglementaire</h3>
+                        <p style="font-size: 1rem;">Simulation thermique dynamique réalisée sur les logiciels métiers
+                            certifiés Liciel, ClimaWin et Bati-Audit pour produire une modélisation fidèle de la
+                            structure
+                            thermique du bâtiment et des consommations réelles.</p>
+                        <div
+                            style="margin-top: 20px; font-size: 0.85rem; font-weight: 700; color: var(--primary-color); background: rgba(0,46,93,0.1); padding: 5px 15px; border-radius: 50px; display: inline-block;">
+                            Liciel · ClimaWin Bati-Audit · Simulation</div>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="pillar-card fade-in" style="transition-delay: 0.2s;">
+                        <div
+                            style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">
+                            03</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Plan Pluriannuel de Travaux</h3>
+                        <p style="font-size: 1rem;">Création d'une feuille de route stratégique complète, avec chaque
+                            poste de travaux hiérarchisé par niveau d'urgence (immédiat, 5 ans, 10 ans) et chiffré pour
+                            faciliter la décision en AG.</p>
+                        <div
+                            style="margin-top: 20px; font-size: 0.85rem; font-weight: 700; color: var(--primary-color); background: rgba(0,46,93,0.1); padding: 5px 15px; border-radius: 50px; display: inline-block;">
+                            PPT · Hiérarchisation · Chiffrage</div>
+                    </div>
+
+                    <!-- Pillar 4 -->
+                    <div class="pillar-card fade-in" style="transition-delay: 0.3s;">
+                        <div
+                            style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">
+                            04</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Optimisation Financière</h3>
+                        <p style="font-size: 1rem;">Intégration systématique de l'ensemble des dispositifs d'aides
+                            disponibles (MaPrimeRénov' Copropriété et CEE) pour minimiser le reste à charge pour chaque
+                            copropriétaire.</p>
+                        <div
+                            style="margin-top: 20px; font-size: 0.85rem; font-weight: 700; color: var(--primary-color); background: rgba(0,46,93,0.1); padding: 5px 15px; border-radius: 50px; display: inline-block;">
+                            MaPrimeRénov' · CEE · Reste à charge</div>
                     </div>
                 </div>
             </div>
 
-            <div style="margin-top: 60px; text-align: center;">
-                <a href="projets.html" class="btn-primary">Retour aux projets</a>
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 60px 0;">
+
+            <!-- LOGICIELS -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span
+                        style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Expertise
+                        Logicielle & Simulation</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Outils certifiés pour une modélisation de référence
+                    </h2>
+                </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; align-items: start;">
+                    <div>
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                            La qualité d'un diagnostic énergétique repose directement sur la fiabilité des
+                            outils de simulation utilisés. Pour ce projet, nous avons fait appel aux logiciels
+                            métiers certifiés par les organismes réglementaires français.
+                        </p>
+                        <p style="font-size: 1.1rem; margin-bottom: 40px;">
+                            Cette rigueur logicielle nous a permis de proposer des <strong>scénarios
+                                de travaux sur-mesure</strong>, chacun accompagné d'une simulation des économies
+                            projetées.
+                        </p>
+
+                        <div class="software-card">
+                            <div class="software-icon">
+                                <svg width="24" height="24" viewBox="0 0 40 40" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="6" y="6" width="28" height="28" rx="2" stroke="#002E5D" stroke-width="2" />
+                                    <path d="M12 28l5-10 5 6 5-8 5 12" stroke="#002E5D" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4
+                                    style="color: var(--primary-color); font-family: 'Montserrat', sans-serif; font-size: 1.1rem;">
+                                    ClimaWin / Bati-Audit / Liciel </h4>
+                                <p style="font-size: 0.9rem; margin-top: 5px;">Simulation thermique réglementaire ·
+                                    Audit énergétique certifié</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div
+                        style="background: rgba(0, 46, 93, 0.95); border-radius: 24px; padding: 50px 40px; color: white; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                        <div
+                            style="font-weight: 700; text-transform: uppercase; color: var(--accent-color); letter-spacing: 1px; margin-bottom: 20px;">
+                            Objectif de gain énergétique minimum</div>
+                        <div
+                            style="font-family: 'Montserrat', sans-serif; font-size: 5rem; font-weight: 900; line-height: 1; margin-bottom: 20px;">
+                            &gt;35<span style="font-size: 3rem; color: var(--accent-color);">%</span></div>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 30px;">
+                            Seuil réglementaire visé pour l'éligibilité aux dispositifs d'aides à la rénovation
+                            énergétique pour les copropriétés.
+                        </p>
+
+                        <div style="background: rgba(255,255,255,0.1); border-radius: 12px; padding: 20px;">
+                            <div
+                                style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+                                <span>MaPrimeRénov' Copropriété</span>
+                                <span style="color: #2ECC71; font-weight: 700;">Éligible</span>
+                            </div>
+                            <div
+                                style="display: flex; justify-content: space-between; margin-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">
+                                <span>Certificats d'Économies d'Énergie</span>
+                                <span style="color: #2ECC71; font-weight: 700;">Intégrés</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Reste à charge copropriétaires</span>
+                                <span style="color: var(--accent-color); font-weight: 700;">Minimisé</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 60px 0;">
+
+            <!-- KPIs -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px; text-align: center;">
+                    <span
+                        style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Chiffres
+                        Clés du Projet</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Une mission d'envergure, des résultats mesurables
+                    </h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <div class="kpi-card fade-in">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">🏢</div>
+                        <h2
+                            style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 10px; font-weight: 900;">
+                            4 752 <span style="font-size: 1.2rem; color: white;">m²</span></h2>
+                        <p style="color: white; font-size: 1rem;">Surface habitable couverte</p>
+                    </div>
+                    <div class="kpi-card fade-in" style="transition-delay: 0.1s;">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">📍</div>
+                        <h2
+                            style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 10px; font-weight: 900;">
+                            Paris <span style="font-size: 1.5rem;">17e</span></h2>
+                        <p style="color: white; font-size: 1rem;">Localisation de la copropriété</p>
+                    </div>
+                    <div class="kpi-card fade-in" style="transition-delay: 0.2s;">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">📊</div>
+                        <h2
+                            style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 10px; font-weight: 900; line-height: 1;">
+                            STD <br><span style="font-size: 1rem; color: white;"></h2>
+                        <p style="color: white; font-size: 1rem;">Logiciels de simulation</p>
+                    </div>
+                    <div class="kpi-card fade-in" style="transition-delay: 0.3s;">
+                        <div style="font-size: 2rem; margin-bottom: 15px;">✅</div>
+                        <h2
+                            style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 10px; font-weight: 900;">
+                            &gt;35 <span style="font-size: 1.5rem;">%</span></h2>
+                        <p style="color: white; font-size: 1rem;">Gain énergétique objectif</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BACK -->
+            <div style="text-align: center;" class="fade-in">
+                <a href="projets.html" class="btn-primary"
+                    style="font-size: 1.1rem; padding: 15px 40px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px;">
+                    <span>&larr;</span> Retour aux projets
+                </a>
+            </div>
+
         </div>
     </main>
 

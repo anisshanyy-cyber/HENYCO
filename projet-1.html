@@ -4,8 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audit Énergétique Tertiaire (Paris) | HENYCO</title>
+    <title>Étude de Cas | Rénovation Résidentielle – HENYCO</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .kpi-card {
+            background: rgba(0, 46, 93, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .pillar-card {
+            background: rgba(0, 46, 93, 0.05);
+            border-radius: 24px;
+            padding: 40px;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 46, 93, 0.1);
+        }
+
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+
+        .results-table th {
+            text-align: left;
+            padding: 15px;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            font-weight: 700;
+        }
+
+        .results-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
 
 <body>
@@ -25,80 +80,254 @@
         <div class="hero-background" style="background-image: url('page 1.webp');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <span style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Étude de Cas | Rénovation Résidentielle</span>
-            <h1 class="fade-in">Rénovation Globale - Maison Individuelle (Paris 46)</h1>
-            <p class="fade-in" style="transition-delay: 0.2s;">Passer d'une passoire thermique classée G à un logement performant classé B avec 81% d'économie d'énergie.</p>
+            <span
+                style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px;">Étude
+                de Cas | Rénovation Résidentielle</span>
+            <h1 class="fade-in">Rénovation Globale - Maison Individuelle</h1>
+            <p class="fade-in" style="transition-delay: 0.2s;">Passer d'une passoire thermique classée G à un logement
+                performant classé B avec 81% d'économie d'énergie.</p>
         </div>
     </header>
 
-    <main class="section-intro" style="text-align: left; background: white;">
-        <div class="container" style="max-width: 1000px;">
-            <div class="feature-block">
-                <div class="feature-content">
-                    <h2>Le Challenge</h2>
-                    <p>Ce projet concerne une maison individuelle de 252 m² construite entre 1948 et 1974. Avant
-                        l'intervention, le logement était classé G, avec une consommation énergétique excessive (478
-                        kWh/m²/an) et un confort thermique précaire en hiver. L'enjeu était de transformer radicalement
-                        ce bâti tout en optimisant les aides financières.</p>
+    <main class="section-intro" style="text-align: left; background: white; padding-bottom: 100px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
 
-                    <h2 style="margin-top: 40px;">Notre Solution : Le Bouquet de Travaux</h2>
-                    <p>Nous avons défini une stratégie de rénovation globale en plusieurs postes clés :</p>
-                    <ul style="margin: 20px 0; padding-left: 20px;">
-                        <li><strong>Isolation de l'enveloppe :</strong> ITE (Murs), Combles et Plancher bas.</li>
-                        <li><strong>Menuiseries :</strong> Remplacement par du double vitrage à isolation renforcée.
-                        </li>
-                        <li><strong>Chauffage & ECS :</strong> Installation d'une PAC air/eau haute performance et d'un
-                            chauffe-eau thermodynamique.</li>
-                        <li><strong>Ventilation :</strong> Mise en place d'une VMC double flux.</li>
-                    </ul>
+            <!-- LE CHALLENGE -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span
+                        style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Le
+                        Challenge</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Un bâti ancien à transformer radicalement</h2>
+                </div>
 
-                    <h2 style="margin-top: 40px;">Analyse Technique & Scénarios</h2>
-                    <div class="projects-grid" style="padding: 20px 0; margin-top: 20px;">
-                        <img src="Projet 1/ETAT INTIALE.webp" alt="État Initial"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                        <img src="Projet 1/SCENARIO 1.webp" alt="Scénario 1"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; align-items: start;">
+                    <div>
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                            Ce projet concerne une maison individuelle de <strong
+                                style="color:var(--primary-color);">252 m²</strong>,
+                            construite entre 1948 et 1974. Avant l'intervention, le logement affichait une
+                            classification
+                            <strong style="color:#cc4444;">G</strong> au DPE — la pire catégorie — avec une consommation
+                            énergétique de <strong style="color:var(--primary-color);">478 kWh/m²/an</strong> et un
+                            confort
+                            thermique précaire en hiver.
+                        </p>
+                        <p style="font-size: 1.1rem; margin-bottom: 40px;">
+                            L'enjeu était double : transformer radicalement la performance de ce bâti ancien tout en
+                            mobilisant les dispositifs d'aides financières disponibles de manière optimale. Une approche
+                            de rénovation globale s'est imposée comme la stratégie la plus efficace.
+                        </p>
+                    </div>
+
+                    <!-- Grille Statistiques du Challenge -->
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                        <div class="kpi-card fade-in">
+                            <h2 style="color: var(--accent-color); font-size: 2.2rem; margin-bottom: 5px;">478 <span
+                                    style="font-size: 1rem; color: white;">kWh</span></h2>
+                            <p style="color: white; font-size: 0.9rem;">Consommation initiale (m²/an) · Classe G</p>
+                        </div>
+                        <div class="kpi-card fade-in" style="transition-delay: 0.1s;">
+                            <h2 style="color: #E74C3C; font-size: 2.2rem; margin-bottom: 5px;">15</h2>
+                            <p style="color: white; font-size: 0.9rem;">kg CO₂/m²/an émis</p>
+                        </div>
+                        <div class="kpi-card fade-in" style="transition-delay: 0.2s;">
+                            <h2 style="color: var(--accent-color); font-size: 2.2rem; margin-bottom: 5px;">4 812 <span
+                                    style="font-size: 1rem; color: white;">€</span></h2>
+                            <p style="color: white; font-size: 0.9rem;">Dépense annuelle</p>
+                        </div>
+                        <div class="kpi-card fade-in" style="transition-delay: 0.3s;">
+                            <h2 style="color: var(--accent-color); font-size: 2.2rem; margin-bottom: 5px;">252 <span
+                                    style="font-size: 1rem; color: white;">m²</span></h2>
+                            <p style="color: white; font-size: 0.9rem;">Surface habitable. concernée</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galerie existante réinsérée -->
+                <div class="projects-grid"
+                    style="padding: 20px 0; margin-top: 40px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                    <img src="Projet 1/ETAT INTIALE.webp" alt="État Initial"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <img src="Projet 1/S1.webp" alt="Scénario 1"
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 60px 0;">
+
+            <!-- SOLUTION -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span
+                        style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Nos
+                        consignes</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Le Bouquet de Travaux</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
+                    <div class="pillar-card fade-in">
+                        <div
+                            style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">
+                            01</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Isolation de l'Enveloppe</h3>
+                        <p style="font-size: 1rem;">Isolation thermique par l'extérieur (ITE) sur les murs, traitement
+                            des combles perdus et isolation du plancher bas pour stopper les déperditions à la source.
+                        </p>
+                        <div
+                            style="margin-top: 15px; font-size: 0.8rem; font-weight: 700; color: var(--primary-color);">
+                            ITE Murs · Combles · Plancher bas</div>
+                    </div>
+
+                    <div class="pillar-card fade-in" style="transition-delay: 0.1s;">
+                        <div
+                            style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">
+                            02</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Menuiseries Performantes</h3>
+                        <p style="font-size: 1rem;">Remplacement complet des fenêtres et portes-fenêtres par un double
+                            vitrage à isolation renforcée, éliminant les ponts thermiques et les infiltrations d'air.
+                        </p>
+                        <div
+                            style="margin-top: 15px; font-size: 0.8rem; font-weight: 700; color: var(--primary-color);">
+                            Double vitrage · Isolation renforcée</div>
+                    </div>
+
+                    <div class="pillar-card fade-in" style="transition-delay: 0.2s;">
+                        <div
+                            style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">
+                            03</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Chauffage & ECS</h3>
+                        <p style="font-size: 1rem;">Installation d'une pompe à chaleur air/eau haute performance en
+                            remplacement du système existant, couplée à un chauffe-eau thermodynamique (CET).</p>
+                        <div
+                            style="margin-top: 15px; font-size: 0.8rem; font-weight: 700; color: var(--primary-color);">
+                            PAC air/eau · CET</div>
+                    </div>
+
+                    <div class="pillar-card fade-in" style="transition-delay: 0.3s;">
+                        <div
+                            style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">
+                            04</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Ventilation Double Flux</h3>
+                        <p style="font-size: 1rem;">Mise en place d'une VMC double flux pour garantir un renouvellement
+                            d'air optimal, récupérer les calories de l'air extrait et maintenir une qualité d'air
+                            intérieure.</p>
+                        <div
+                            style="margin-top: 15px; font-size: 0.8rem; font-weight: 700; color: var(--primary-color);">
+                            VMC DF · Récupération chaleur</div>
                     </div>
                 </div>
             </div>
 
-            <div class="feature-block" style="margin-top: 40px;">
-                <div class="feature-content">
-                    <h2>Résultats obtenus</h2>
-                    <div style="background: var(--light-bg); padding: 30px; border-radius: 12px; margin-top: 20px;">
-                        <table style="width: 100%; border-collapse: collapse;">
-                            <tr style="border-bottom: 2px solid var(--primary-color);">
-                                <th style="text-align: left; padding: 10px;">Indicateur</th>
-                                <th style="text-align: left; padding: 10px;">État Initial (G)</th>
-                                <th style="text-align: left; padding: 10px;">Après Travaux (B)</th>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Consommation</td>
-                                <td style="padding: 10px;">478 kWh/m²/an</td>
-                                <td style="padding: 10px; font-weight: 700; color: #27ae60;">92 kWh/m²/an</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Émissions CO2</td>
-                                <td style="padding: 10px;">15 kg CO2/m²/an</td>
-                                <td style="padding: 10px; font-weight: 700; color: #27ae60;">3 kg CO2/m²/an</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 10px;">Dépense annuelle</td>
-                                <td style="padding: 10px;">~ 4 812 €</td>
-                                <td style="padding: 10px; font-weight: 700; color: #27ae60;">~ 932 €</td>
-                            </tr>
-                        </table>
-                        <p style="margin-top: 20px; font-weight: 600; color: var(--primary-color);">Gain énergétique
-                            total de 81% et valorisation du patrimoine de plus de 15%.</p>
-                    </div>
-                    <img src="Projet 1/Capture d'écran 2024-09-17 114404.webp" alt="Détail calculs thermique"
-                        style="width: 100%; margin-top: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 60px 0;">
+
+            <!-- RESULTATS -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span
+                        style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Analyse
+                        Technique & Résultats</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Des indicateurs transformés</h2>
                 </div>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; align-items: start;">
+                    <!-- Gauche: Tableau et Barre Economie -->
+                    <div>
+                        <div
+                            style="background: rgba(0, 46, 93, 0.03); padding: 30px; border-radius: 16px; border: 1px solid rgba(0,0,0,0.05); margin-bottom: 30px;">
+                            <table class="results-table">
+                                <thead>
+                                    <tr>
+                                        <th>Indicateur</th>
+                                        <th>État Initial (G)</th>
+                                        <th>Après Travaux (B)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Consommation</td>
+                                        <td style="color: #E74C3C;">478 kWh/m²/an</td>
+                                        <td style="color: #2ECC71; font-weight: bold;">92 kWh/m²/an</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Émissions CO₂</td>
+                                        <td style="color: #E74C3C;">15 kg CO₂/m²/an</td>
+                                        <td style="color: #2ECC71; font-weight: bold;">3 kg CO₂/m²/an</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dépense annuelle</td>
+                                        <td style="color: #E74C3C;">≈ 4 812 €</td>
+                                        <td style="color: #2ECC71; font-weight: bold;">≈ 932 €</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Classe DPE</td>
+                                        <td style="color: #E74C3C;">G</td>
+                                        <td style="color: #2ECC71; font-weight: bold;">B</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div
+                            style="background: rgba(0, 46, 93, 0.95); border-radius: 16px; padding: 30px; color: white; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                <span
+                                    style="font-weight: 700; text-transform: uppercase; color: var(--accent-color); letter-spacing: 1px;">Économie
+                                    réalisée</span>
+                                <span
+                                    style="font-weight: 900; font-size: 1.5rem; color: var(--accent-color);">81%</span>
+                            </div>
+                            <div
+                                style="height: 10px; background: rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; margin-bottom: 10px;">
+                                <div
+                                    style="width: 81%; height: 100%; background: linear-gradient(90deg, var(--accent-color), #FFD633);">
+                                </div>
+                            </div>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">3 880 € économisés par an ·
+                                Retour sur investissement optimisé</p>
+                        </div>
+                    </div>
+
+                    <!-- Droite: Gros Chiffres -->
+                    <div
+                        style="display: flex; flex-direction: column; gap: 40px; justify-content: center; height: 100%;">
+                        <div style="border-left: 4px solid var(--accent-color); padding-left: 20px;">
+                            <div
+                                style="font-family: 'Montserrat', sans-serif; font-size: 4rem; font-weight: 900; color: var(--primary-color); line-height: 1; margin-bottom: 10px;">
+                                81<span style="font-size: 2rem;">%</span></div>
+                            <div style="font-size: 1.1rem; color: var(--text-secondary);">de gain énergétique
+                                global,<br>de 478 à 92 kWh/m²/an</div>
+                        </div>
+                        <div style="border-left: 4px solid var(--accent-color); padding-left: 20px;">
+                            <div
+                                style="font-family: 'Montserrat', sans-serif; font-size: 4rem; font-weight: 900; color: var(--primary-color); line-height: 1; margin-bottom: 10px;">
+                                +15<span style="font-size: 2rem;">%</span></div>
+                            <div style="font-size: 1.1rem; color: var(--text-secondary);">de valorisation patrimoniale
+                                estimée<br>du bien immobilier</div>
+                        </div>
+                        <div style="border-left: 4px solid var(--accent-color); padding-left: 20px;">
+                            <div
+                                style="font-family: 'Montserrat', sans-serif; font-size: 4rem; font-weight: 900; color: var(--primary-color); line-height: 1; margin-bottom: 10px;">
+                                5×</div>
+                            <div style="font-size: 1.1rem; color: var(--text-secondary);">Réduction des émissions
+                                CO₂<br>de 15 à 3 kg CO₂/m²/an</div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div style="margin-top: 60px; text-align: center;">
-                <a href="projets.html" class="btn-primary">Retour aux projets</a>
+            <!-- BACK -->
+            <div style="text-align: center;" class="fade-in">
+                <a href="projets.html" class="btn-primary"
+                    style="font-size: 1.1rem; padding: 15px 40px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px;">
+                    <span>&larr;</span> Retour aux projets
+                </a>
             </div>
+
         </div>
     </main>
 

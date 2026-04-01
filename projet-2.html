@@ -4,8 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rénovation Industrielle (Genève) | HENYCO</title>
+    <title>Étude de Cas | Ingénierie Hydraulique – HENYCO</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .kpi-card {
+            background: rgba(0, 46, 93, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 24px;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .pillar-card {
+            background: rgba(0, 46, 93, 0.05);
+            border-radius: 24px;
+            padding: 40px;
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .software-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: var(--light-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .software-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 46, 93, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,60 +88,178 @@
         </div>
     </header>
 
-    <main class="section-intro" style="text-align: left; background: white;">
-        <div class="container" style="max-width: 1000px;">
-            <div class="feature-block">
-                <div class="feature-content">
-                    <h2>L'Objectif du Projet</h2>
-                    <p>Ce projet d'envergure illustre la synergie entre un audit énergétique global et une conception
-                        technique de précision. L'enjeu était de transformer un bâtiment de 420 m² en un modèle
-                        d'efficacité thermique (étiquette G à B), tout en garantissant un confort thermique homogène sur
-                        l'ensemble des niveaux.</p>
-
-                    <h2 style="margin-top: 40px;">Expertise Technique : Dimensionnement & Hydraulique</h2>
-                    <p>Sur une telle surface, le simple remplacement du générateur ne suffit pas. Nous avons réalisé une
-                        étude complète :</p>
-                    <ul style="margin: 20px 0; padding-left: 20px;">
-                        <li><strong>Calibrage du Générateur (PAC) :</strong> Calcul précis des charges thermiques pour
-                            éviter les cycles courts.</li>
-                        <li><strong>Ingénierie des Réseaux :</strong> Calibrage rigoureux des conduits pour une
-                            irrigation parfaite des émetteurs (planchers chauffants et radiateurs).</li>
-                        <li><strong>Équilibrage Hydraulique :</strong> Étude des pertes de charge pour un confort
-                            identique dans chaque pièce.</li>
-                    </ul>
+    <main class="section-intro" style="text-align: left; background: white; padding-bottom: 100px;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto;">
+            
+            <!-- EXPERTISE TECHNIQUE -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Expertise Technique</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Dimensionnement & Ingénierie Hydraulique</h2>
                 </div>
-            </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                    <!-- Pillar 1 -->
+                    <div class="pillar-card fade-in">
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">01</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Calibrage du Générateur (PAC)</h3>
+                        <p style="font-size: 1rem;">Calcul précis des charges thermiques selon les déperditions réelles du bâtiment pour dimensionner la PAC air/eau de manière optimale et éviter les cycles courts préjudiciables à la longévité.</p>
+                    </div>
 
-            <div class="feature-block" style="margin-top: 40px;">
-                <div class="feature-content">
-                    <h2>Plans d'Exécution & Modélisation (CAO)</h2>
-                    <p>Pour assurer une mise en œuvre sans faille, nous avons utilisé AutoCAD pour les plans 2D et Revit
-                        (BIM) pour la modélisation 3D de la chaufferie.</p>
-                    <div class="projects-grid" style="padding: 20px 0; margin-top: 20px;">
-                        <img src="Projet 2/rdc.webp" alt="Plan RDC"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                        <img src="Projet 2/rdc+1.webp" alt="Plan RDC+1"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                        <img src="Projet 2/ss.webp" alt="Plan Sous-sol"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-                        <img src="Projet 2/PLANCHER.webp" alt="Détail Plancher"
-                            style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <!-- Pillar 2 -->
+                    <div class="pillar-card fade-in" style="transition-delay: 0.1s;">
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">02</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Ingénierie des Réseaux</h3>
+                        <p style="font-size: 1rem;">Calibrage rigoureux des diamètres de conduits et des débits pour assurer une irrigation parfaite de chaque émetteur — planchers chauffants basse température et radiateurs — sur l'ensemble des niveaux.</p>
+                    </div>
+
+                    <!-- Pillar 3 -->
+                    <div class="pillar-card fade-in" style="transition-delay: 0.2s;">
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 1.5rem; color: var(--accent-color); font-weight: 900; margin-bottom: 20px;">03</div>
+                        <h3 style="margin-bottom: 15px; font-size: 1.3rem;">Équilibrage Hydraulique</h3>
+                        <p style="font-size: 1rem;">Étude complète des pertes de charge dans chaque boucle du circuit pour garantir un débit équilibré et un confort thermique strictement identique dans chaque pièce, indépendamment de son éloignement.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="feature-block" style="margin-top: 40px;">
-                <div class="feature-content">
-                    <h2>Indicateurs Clés</h2>
-                    <p style="font-weight: 600; color: var(--primary-color);">Économie d'énergie projetée : ~80% de
-                        gain. Utilisation des standards Revit et AutoCAD pour une coordination parfaite entre les corps
-                        d'état.</p>
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 60px 0;">
+
+            <!-- CAO / BIM -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Plans d'Exécution & Modélisation</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Précision CAO & BIM</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 50px; align-items: center;">
+                    <div>
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                            Sur une surface de <strong style="color: var(--primary-color);">420 m²</strong> répartis sur plusieurs
+                            niveaux, chaque détail de mise en œuvre conditionne la performance finale du système. Nous
+                            avons mobilisé les outils de référence de l'ingénierie pour garantir une coordination parfaite
+                            entre tous les corps d'état.
+                        </p>
+                        <p style="font-size: 1.1rem; margin-bottom: 40px;">
+                            La liasse documentaire produite comprend les plans de principe hydrauliques, les schémas
+                            de régulation, les plans de réservation et la maquette numérique de la chaufferie en
+                            <strong style="color: var(--primary-color);">modélisation BIM</strong> — permettant une visualisation
+                            tridimensionnelle avant tout percement.
+                        </p>
+
+                        <div class="software-card">
+                            <div class="software-icon">
+                                <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <rect x="3" y="3" width="22" height="22" rx="1" stroke="#002E5D" stroke-width="2"/>
+                                  <path d="M8 20L20 8M8 8h12v12" stroke="#002E5D" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-color); font-family: 'Montserrat', sans-serif; font-size: 1.1rem;">AutoCAD</h4>
+                                <p style="font-size: 0.9rem; margin-top: 5px;">Plans 2D d'exécution</p>
+                            </div>
+                        </div>
+
+                        <div class="software-card">
+                            <div class="software-icon">
+                                <svg width="24" height="24" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M14 4L4 10v8l10 6 10-6V10L14 4z" stroke="#002E5D" stroke-width="2"/>
+                                  <path d="M4 10l10 6 10-6M14 16v8" stroke="#002E5D" stroke-width="2" opacity="0.6"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--primary-color); font-family: 'Montserrat', sans-serif; font-size: 1.1rem;">Revit · BIM</h4>
+                                <p style="font-size: 0.9rem; margin-top: 5px;">Modélisation 3D chaufferie</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual / Images -->
+                    <div style="background: rgba(0, 46, 93, 0.05); border-radius: 24px; padding: 30px;">
+                        <span style="font-family: 'Montserrat', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--primary-color); margin-bottom: 20px; display: block;">PLAN D'EXÉCUTION · CAO/BIM</span>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+                            <img src="Projet 2/rdc.webp" alt="Plan RDC" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <img src="Projet 2/rdc+1.webp" alt="Plan RDC+1" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <img src="Projet 2/ss.webp" alt="Plan Sous-sol" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                            <img src="Projet 2/PLANCHER.webp" alt="Détail Plancher" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                        </div>
+                        <img src="Projet 2/11.webp" alt="Plan supplémentaire" style="margin-top: 15px; width: 100%; height: auto; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    </div>
                 </div>
             </div>
 
-            <div style="margin-top: 60px; text-align: center;">
-                <a href="projets.html" class="btn-primary">Retour aux projets</a>
+            <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.1); margin: 60px 0;">
+
+            <!-- RÉSULTATS -->
+            <div style="margin-bottom: 80px;" class="fade-in">
+                <div style="margin-bottom: 40px;">
+                    <span style="color: var(--accent-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Indicateurs Clés</span>
+                    <h2 style="font-size: 2.5rem; margin-top: 10px;">Une performance de précision</h2>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px;">
+                    <!-- Gauche: KPIs & Checklist -->
+                    <div>
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+                           <div class="kpi-card fade-in">
+                               <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 5px;">420 <span style="font-size: 1rem; color: white;">m²</span></h2>
+                               <p style="color: white; font-size: 0.9rem;">Surface traitée en thermique exhaustive</p>
+                           </div>
+                           <div class="kpi-card fade-in" style="transition-delay: 0.1s;">
+                               <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 5px;">G&rarr;B</h2>
+                               <p style="color: white; font-size: 0.9rem;">Saut de classe DPE projeté par l'audit</p>
+                           </div>
+                           <div class="kpi-card fade-in" style="transition-delay: 0.2s;">
+                               <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 5px;">2</h2>
+                               <p style="color: white; font-size: 0.9rem;">Outils CAO/BIM mobilisés</p>
+                           </div>
+                           <div class="kpi-card fade-in" style="transition-delay: 0.3s;">
+                               <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 5px;">3</h2>
+                               <p style="color: white; font-size: 0.9rem;">Niveaux hydrauliquement équilibrés</p>
+                           </div>
+                        </div>
+
+                        <div class="compliance-list fade-in" style="margin-top: 30px; background: rgba(0,46,93,0.05); padding: 20px; border-radius: 16px;">
+                            <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 12px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 12px;">
+                                <span style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                <span style="font-size: 0.95rem;"><strong>Calcul des charges thermiques</strong> selon méthode réglementaire</span>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 12px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 12px;">
+                                <span style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                <span style="font-size: 0.95rem;"><strong>Équilibrage hydraulique</strong> de chaque boucle de circuit</span>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 12px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 12px;">
+                                <span style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                <span style="font-size: 0.95rem;"><strong>Plans d'exécution AutoCAD</strong> livrés pour les installateurs</span>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 12px; border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 12px;">
+                                <span style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                <span style="font-size: 0.95rem;"><strong>Maquette BIM Revit</strong> de la chaufferie en 3D</span>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 15px;">
+                                <span style="color: var(--accent-color); font-weight: bold; font-size: 1.2rem;">✔</span>
+                                <span style="font-size: 0.95rem;"><strong>Coordination inter-corps d'état</strong> garantie par le BIM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Droite: Hero saving -->
+                    <div style="background: rgba(0, 46, 93, 0.95); border-radius: 24px; padding: 50px 40px; color: white; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-left: 4px solid var(--accent-color);">
+                        <div style="font-weight: 700; text-transform: uppercase; color: var(--accent-color); letter-spacing: 1px; margin-bottom: 20px;">Gain énergétique projeté</div>
+                        <div style="font-family: 'Montserrat', sans-serif; font-size: 5rem; font-weight: 900; line-height: 1; margin-bottom: 20px;">~80<span style="font-size: 3rem; color: var(--accent-color);">%</span></div>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-bottom: 30px;">
+                            Résultat de la combinaison entre le surdimensionnement évité, l'équilibrage hydraulique de précision et la sélection optimale des émetteurs.
+                        </p>
+                    </div>
+                </div>
             </div>
+
+            <!-- BACK -->
+            <div style="text-align: center;" class="fade-in">
+                <a href="projets.html" class="btn-primary" style="font-size: 1.1rem; padding: 15px 40px; border-radius: 50px; display: inline-flex; align-items: center; gap: 10px;">
+                    <span>&larr;</span> Retour aux projets
+                </a>
+            </div>
+
         </div>
     </main>
 
